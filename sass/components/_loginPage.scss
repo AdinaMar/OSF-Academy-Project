@@ -1,0 +1,134 @@
+.login-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: -105%;
+    z-index: 999;
+    height: 100%;
+    width:100%;
+    
+    background: rgba(black, 0.7);
+    transition:all 0.5s ease-in-out;
+
+    &.show-active{
+        right: 0;
+        transition:all 0.5s ease-in-out;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        
+        border: 1px solid $grey;
+        border-radius: 10px;
+        width: 500px;
+        height:467px;
+        @include padding((rem-to-px(2)),(rem-to-px(2)),(rem-to-px(2)),(rem-to-px(2)));
+        
+        @include margin((rem-to-px(2)),(rem-to-px(2)),(rem-to-px(2)),(rem-to-px(2)));
+
+
+
+      h2 {
+          font-size: pt-to-px(30);
+          text-align: center;
+          color:$m-grey;
+          font-weight: 900;
+          
+      }
+
+      span {
+          display: block;
+          font-size: pt-to-px(14);
+          font-weight: 400;
+          line-height: 26px;
+          @include padding((rem-to-px(1)),null,null,null);
+          align-self: flex-start;
+          color:$m-grey;
+      }
+
+      input {
+          width: 90%;
+          /*margin: 0.7rem 0;*/
+          @include margin((rem-to-px(0.7)),0,(rem-to-px(0.7)),0);
+          font-size: 25px;
+          border: 2px solid $grey;
+          border-radius: 20px;
+          color: black;
+          padding: 10px;
+
+         
+}
+
+      .submit-btn{
+     
+        @include margin((rem-to-px(1)),null,null,null);
+        display: inline-block;
+        padding:0.9rem 3rem;
+        border-radius: 20px;
+        color:aliceblue;
+        background: $base-green;
+        font-size: 14px;
+        font-weight: 400;
+        cursor: pointer;
+        text-align: center;
+        width: 50%;
+        margin: 1.5rem 0;
+        @include margin((rem-to-px(1.5)),0,(rem-to-px(1.5)),0);
+        border:none;
+        align-content: center;
+
+        &:hover {
+            color: $base-green;
+            background: white;
+            border: 1px solid $base-green;
+        }
+      }
+      p {
+          color:$base-green ;
+          line-height: pt-to-px(35);
+          font-size: pt-to-px(12);
+          cursor: pointer;
+          @include margin(null,null,-35px,null);
+      }
+
+
+      .pass-icons {
+          display: flex;
+          position:relative;
+          width: 100%;
+          justify-content: center;
+         /* padding: 10px;*/
+          
+
+          i {
+              position:absolute;
+              right: 35px;
+              top:30px;
+              color:$grey;
+
+             
+          }
+          #hide2 {
+            display: none;
+        }
+      }
+      .passForgot{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 100%;
+      }
+      .pass{
+          
+          color:$base-green ;
+          line-height: pt-to-px(43);
+          font-size: pt-to-px(12);
+      }
+    }
+}
+

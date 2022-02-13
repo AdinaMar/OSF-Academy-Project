@@ -1,0 +1,121 @@
+
+footer {
+    /*position:fixed;
+    bottom:0;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  
+    .copies{
+      @include margin(null,null,20px,null);
+    }
+.addresses{
+  @include margin(null,null,20px,null);
+}
+
+
+
+        .coll {
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+            &:nth-child(2) {
+                .link-row{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap:100px;
+
+                @include screen("breakpoint-med-small"){
+                  grid-gap:30px;
+                }
+            }
+           /* &:nth-child(4){
+              display: flex;
+              justify-content: space-around;
+
+              a{
+                color:$m-grey;
+                font-size: 20px;
+                opacity: 0.3;
+                
+              }*/
+          p{
+            @include screen("breakpoint-med-small"){
+              line-height: 13px;
+            }
+            
+
+          }  }
+i{
+  color:$m-grey;
+  font-size: 20px;
+  opacity: 0.3;
+  @include padding(null,20px,null,null);
+
+  @include screen("breakpoint-med-small"){
+    font-size:10px;
+    @include padding(null,10px,null,null);
+}
+}
+
+          
+            a {
+              opacity: 0.7;
+              text-decoration: none;
+              font-size:13px;
+              line-height:31px;
+              font-weight:400;
+              color:$m-grey;
+            }
+        
+            .col-small {
+                display: flex;
+                flex-direction: column;
+
+                
+            }
+      
+              }
+    
+
+
+/*classe{
+    opacity: 0.3;
+    text-decoration:none;
+    font-size:20px;
+    color:$m-grey;
+  }*/
+
+  
+  h4 {
+    font-size:13px;
+    font-weight:700;
+    color:$m-grey;
+    @include margin(null,null,20px,null);
+
+    @include screen("breakpoint-med-small"){
+      font-size:9px;
+      @include margin(null,null,10px,null);
+    }
+  }
+  
+  /*.contacts {
+    font-size:13px;
+    line-height:18px;
+    color:$m-grey;
+    font-weight: 400;
+  }*/
+
+  address {
+    display: flex;
+    flex-direction: column;
+      a {
+          text-decoration: none;
+          color: $m-grey;
+          font-size: 13px;
+          line-height: 18px;
+          @include padding(null,null,20px,null);
+      }
+  }
+}

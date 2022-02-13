@@ -1,0 +1,619 @@
+nav {
+
+    .icons {
+         align-items: center;
+         justify-content: center;
+         color: $grey;
+         display: flex;
+
+
+         cursor: pointer;
+         .circle{
+             position:relative;
+
+             .bag{
+                 width:25px;
+                 height:25px;
+                 margin:0;
+                 border-radius: 50%;
+                 position: absolute;
+                 top: -15px;
+                 right:10%;
+                 
+                 background: white;
+                 border: 2px solid $base-green;
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+             }
+         }
+         i{
+             text-align: center;
+             vertical-align: middle;
+             @include padding(null, 22px, null, 22px);
+             font-size: 25px;
+
+             @include screen("breakpoint-med-small") {
+                 font-size:14px;
+                 @include padding(null, 4px, null, 4px);
+             }
+            
+         }
+        @include screen("breakpoint-small") {
+
+            display: none;
+
+             }
+    }
+
+     .en-us{
+       /* padding: 0 22px;*/
+        /*@include padding(null,null,0,22px);*/
+        color: $grey;
+        list-style: none;
+        line-height: 24px;
+
+        @include screen("breakpoint-med-small") {
+            @include padding(null,null,0,10px);
+            line-height: 10px;
+        }
+        select{
+            /*padding: 0 22px;*/
+            @include padding(null,22px,0,22px);
+            color:$grey;
+            outline:0px;
+            border:0px;
+            font-size: 14px;
+            background: #fff;
+
+            @include screen("breakpoint-med-small") {
+                font-size: 10px; 
+                @include padding(null,null,0,3px);
+            }
+            
+        }
+        @include screen("breakpoint-small") {
+            display: none;
+
+    }
+}
+      #media{
+          display:none;
+          @include screen("breakpoint-small") {
+            display: block;
+            border-radius: 20px;
+            
+            @include margin(25px,auto,30px, auto);
+       }
+      }
+   
+      #desktop {
+          display: block;
+          border-radius: 20px;
+          justify-self: center;
+          align-self: center;
+      @include screen("breakpoint-small") {
+       
+           display:none;
+       }
+
+       @include screen("breakpoint-med-small") { 
+        border-radius: 10px;
+        width: 180px;
+        height:180px;
+     }
+       
+    }
+    
+    input {
+    
+        display: none;
+     
+    }
+    /*position: fixed;
+    top: 0;*/
+    display: flex;
+    align-items: center;
+    @include padding(10px, 20px, null, 20px);
+    justify-content: space-between;
+
+     border-bottom: 1px solid $grey;
+     width: 100%;
+
+     @include screen("breakpoint-med-small") {
+        @include padding(5px, 10px, null, 10px); }
+}
+
+.logo {
+   
+    display: flex;
+    
+    
+
+
+    .text-logo{
+        @include margin(null,null,null,9px);
+        @include screen("breakpoint-small") {
+            display: none;
+
+            @include screen("breakpoint-med-small") {
+                @include margin(null,null,null,4px);
+        }
+    }
+    
+
+    .logop{
+
+        font-size: pt-to-px(31.65);
+        color: #011847;
+        font-weight: 900;
+        letter-spacing: 10px;
+        
+        @include margin(null, null, -10px, null);
+
+        @include screen("breakpoint-med-small") {
+            font-size: pt-to-px(15.65);
+            letter-spacing: 5px; 
+            @include margin(5px, null, -5px, null);
+        }
+    }
+
+    p{
+        font-size: pt-to-px(18);
+        color:$base-green;
+        font-weight: 400;
+
+        @include screen("breakpoint-med-small") {
+            font-size: pt-to-px(12);
+        }
+}
+    }
+}
+
+    
+
+.wrapper {
+    display:flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: 65px;
+    /*margin: auto;*/
+    @include screen("breakpoint-small") {
+        margin: auto;
+        display: flex;
+        align-items: center;
+        width: auto;
+        justify-content: center;
+    }
+
+  
+
+.nav-links{
+    text-decoration: none;
+    display: inline-flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+
+     @include screen("breakpoint-small") {
+     position: fixed;
+    width: 100%;
+    background: $base-darkblue;
+    top: 75px;
+    left: -100%;
+   /* height: 100vh;*/
+    display: block;
+    overflow-y: auto;
+     }
+  
+    .fa-caret-down{
+        display: none;
+
+        @include screen("breakpoint-small") {
+        display: block;
+        float: right;
+        color:$grey;
+        
+        line-height:  pt-to-px(30);
+        
+    }
+    
+
+    }
+li {
+  /*  @include padding(null,20px,null,20px);*/
+
+    @include screen("breakpoint-med-small") {
+        @include padding(null,5px,null,5px);
+    }
+
+    &:hover {
+        .mega-box  {
+ /*transition: all 0.3s ease;*/
+  top: 76px;
+  opacity: 1;
+  visibility: visible;
+  
+  @include screen("breakpoint-med-small") {
+      top:70px;
+  }
+        }
+   }
+   p{
+    font-size: 14px;
+    font-weight: 400;
+    height: 78px;
+    align-items: center;
+    display: flex;
+    @include padding(null,10px,null,10px);
+
+    @include screen("breakpoint-med-small") {
+       font-size: pt-to-px(12);
+       @include padding(null,9px,null,9px);
+      
+    }
+
+
+    @include screen("breakpoint-small") {
+        display:block;
+        color:white;
+        font-size: pt-to-px(14);
+        font-weight: 900;
+        line-height:  pt-to-px(55);
+        @include padding(null,20px, null,null);
+}
+ }
+}
+
+.mobile-item{
+    display: none;
+
+
+    @include screen("breakpoint-small") {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-size: pt-to-px(14);
+        font-weight: 900;
+        line-height:  pt-to-px(55);
+       /* @include padding(null,10px, null,null);
+        @include screen("breakpoint-small") {*/
+            @include padding(null,22px,null,22px);
+          
+  }
+}
+.desktop-item {
+    font-size: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
+   
+
+ @include screen("breakpoint-small") {
+        display:none;
+        
+    }
+}
+}
+
+       .mega-box{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        
+        top: 85px;
+        opacity: 0;
+        visibility: hidden;
+      z-index: 1;
+
+       
+        
+
+        @include screen("breakpoint-small") {
+            position:static;
+            top: 65px;
+          opacity: 1;
+         visibility: visible;
+          max-height:0px;
+          overflow: hidden;
+        }
+
+
+
+         .content{
+            background: $base-darkblue;
+            @include padding(22px,22px,22px,22px);
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            width: 100%;
+
+            @include screen("breakpoint-med-small") { 
+                @include padding(10px,10px,10px,10px);
+            }
+
+            @include screen("breakpoint-small") {
+                display: flex;
+                flex-direction: column;
+                padding: 20px 20px 0 20px;
+          }
+        }
+
+          .row{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            label {
+                @include screen("breakpoint-med-small") { 
+                    font-size: pt-to-px(18);
+                    line-height: pt-to-px(15);
+                }
+
+                @include screen("breakpoint-small") {
+                    
+                       font-weight:400;
+                       font-size: pt-to-px(16);
+                       line-height: pt-to-px(31);
+                       }
+              }
+            
+            @include screen("breakpoint-small") {
+                width:100%;
+            }
+        }
+           
+        p{
+         font-weight:900;
+         font-size: 14px;
+         color: white;
+        
+         @include screen("breakpoint-med-small") { 
+            font-size: pt-to-px(18);
+            
+         }
+        
+         @include screen("breakpoint-small") {
+         font-weight:400;
+        font-size: pt-to-px(16);
+        line-height: pt-to-px(31);
+        }
+        }
+
+
+    .mega-links{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        list-style: none; 
+        grid-gap:70px;
+
+        @include screen("breakpoint-small") {
+            display:flex;
+            flex-direction: column;
+            grid-gap: 0px;
+        }
+        
+     a{
+        color:white;
+        font-size: 16px;
+        line-height: 31px;
+        display: block;
+
+        &:hover {
+            color: $base-green;
+        }
+
+        @include screen("breakpoint-med-small") { 
+            font-size: pt-to-px(12);
+            line-height: pt-to-px(18);
+         }
+    }
+    }
+
+}
+
+.btn {
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    color: $d-grey;
+  
+    @include screen("breakpoint-small") {
+        display: block;
+   
+    }
+
+}
+ 
+#menu-btn:checked ~ .nav-links{
+    
+  
+@include screen("breakpoint-small") {
+    left: 0%;
+}
+
+}
+#menu-btn:checked ~ .btn.menu-btn{
+    
+    @include screen("breakpoint-small") {
+    display: none;
+  
+  }
+
+}
+
+#cancel-btn:checked ~ .btn.menu-btn{
+    @include screen("breakpoint-small") {
+    
+    display: block;
+   
+  }
+}
+
+#cancel-btn:checked ~ .btn.cancel-btn{
+    @include screen("breakpoint-small") {
+        display: none;
+        
+    }
+}
+
+#showMega:checked ~ .mega-box{
+    @include screen("breakpoint-small") {
+    max-height: 100%;
+  }
+}
+#cancel-btn:checked ~ .mega-box{
+    @include screen("breakpoint-small") {
+        max-height: 100%;
+    }
+}
+#showTitle:checked ~ .mobile-item{
+    
+    @include screen("breakpoint-small") {
+        max-height: 100%;
+      }
+
+
+}
+
+#showMega:checked ~ .mega-links li{
+   
+    @include screen("breakpoint-small") {
+    opacity: 0;
+    visibility: hidden;
+ }
+
+}
+
+
+.mega{
+@include screen("breakpoint-small") {
+
+    position: static;
+    opacity:1;
+    visibility: visible;
+    top:65px;
+    @include padding(null,null,null,20px);
+    width:100%;
+    max-height: 0px;
+    overflow: hidden;
+    
+    
+   }
+}
+
+#showTitle:checked ~ .mega{
+    @include screen("breakpoint-small") {
+
+    max-height: 100%;
+    
+}
+}
+
+.mini {
+    @include screen("breakpoint-small") {
+    position: static;
+    opacity:1;
+    visibility: visible;
+    top:65px;
+    @include padding(null,null,null,20px);
+    width:100%;
+    max-height: 0px;
+    color:white;
+}
+}
+
+#showSale:checked ~ .mini {
+    @include screen("breakpoint-small") {
+
+    max-height: 100%;
+}
+}
+}
+
+.icons{
+    display: none;
+
+    @include screen("breakpoint-small") {
+        align-items: center;
+         justify-content: center;
+         color: $grey;
+         display: flex;
+         @include margin(auto,null,null,null);
+         height:55px;
+         background: $base-darkblue;
+
+}
+i{
+    @include screen("breakpoint-small") {
+        @include padding(null,22px,null,22px);
+        font-size:30px; 
+}
+}
+}
+.fa-bars{
+    @include screen("breakpoint-small") {
+        position:absolute;
+        left:20px;
+        top:30px;
+       
+    }
+} 
+
+.fa-times {
+
+
+    @include screen("breakpoint-small") {
+        position:absolute;
+        left: 20px;
+        top:30px;
+      
+         }
+     }
+
+     #service{
+         font-size: 14px;
+         font-weight: 400;
+        &:hover {
+            background: $base-darkblue;
+            color:white;
+            border-bottom: solid $base-green 10px;
+           
+      
+           
+    }
+}
+
+.mega-links-sale{
+    
+    list-style: none;
+    /*font-size: pt-to-px(16);*/
+    font-weight: 400;
+   /* line-height: pt-to-px(31);*/
+    @include screen("breakpoint-med-small") { 
+        @include padding(null,null,null,50px);
+    }
+
+   
+     li {
+        @include screen("breakpoint-med-small") { 
+            font-size: pt-to-px(12);
+            line-height: pt-to-px(18);
+           
+           
+         }
+     }
+
+    a{
+       
+        color: #fff;
+        font-size: 16px;
+        line-height: 31px;
+
+        &:hover{
+            color:$base-green;
+        }
+    }
+}
+   
+
+

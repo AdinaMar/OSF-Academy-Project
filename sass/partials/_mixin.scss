@@ -1,0 +1,50 @@
+@mixin padding($top, $right, $bottom, $left) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+  }
+
+  @mixin margin($top, $right, $bottom, $left) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+  }
+
+  @mixin width-height($width, $height:$width) {
+    width: $width;
+    height: $height;
+  }
+
+
+@mixin screen($size) {
+  $breakpoint-big: "(min-width:1280)";
+  $breakpoint-med-small:"(min-width:768px) and (max-width:1279px)";
+  $breakpoint-small: "(min-width:320px) and (max-width:767px)";
+
+
+
+  @if $size == breakpoint-big {
+    @media only screen and #{$breakpoint-big} {
+      @content;
+    }
+  }
+  @else if $size == breakpoint-med-small {
+    @media only screen and #{$breakpoint-med-small} {
+      @content;
+    }
+
+  }
+  @else if $size == breakpoint-small {
+    @media only screen and #{$breakpoint-small} {
+      @content;
+    }
+  }
+  @else {
+    @media only screen and #{$size} {
+      @content;
+    }
+  }
+}
+

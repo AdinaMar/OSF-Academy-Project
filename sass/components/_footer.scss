@@ -1,36 +1,59 @@
-
 footer {
-    /*position:fixed;
+ /*position:fixed;
     bottom:0;*/
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+
+  @include screen("breakpoint-small") {
+    flex-direction: column;
+    @include margin(23px,15px,23px,15px);
+  }
+
+  .copies {
+    @include margin(null, null, 20px, null);
+  }
+  .addresses {
+    @include margin(null, null, 20px, null);
+  }
+
+  .coll {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-  
-    .copies{
-      @include margin(null,null,20px,null);
+    flex-direction: column;
+    align-self: flex-start;
+    &:nth-child(2) {
+      .link-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 100px;
+
+        @include screen("breakpoint-med-small") {
+          grid-gap: 30px;
+        }
+
+        @include screen("breakpoint-small") {
+          display: flex;
+          position: static;
+          opacity: 1;
+          visibility: visible;
+          width: 100%;
+          max-height: 0;
+          flex-direction: column;
+          overflow: hidden;
+          grid-gap:0px;
+        }
+      }
     }
-.addresses{
-  @include margin(null,null,20px,null);
-}
 
+    &:nth-child(4) {
+      @include screen("breakpoint-small") {
+        justify-self: center;
+        @include margin(null, auto, 50px, auto);
+      }
+    }
 
-
-        .coll {
-            display: flex;
-            flex-direction: column;
-            align-self: flex-start;
-            &:nth-child(2) {
-                .link-row{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-gap:100px;
-
-                @include screen("breakpoint-med-small"){
-                  grid-gap:30px;
-                }
-            }
-           /* &:nth-child(4){
+    /* &:nth-child(4){
               display: flex;
               justify-content: space-around;
 
@@ -40,44 +63,42 @@ footer {
                 opacity: 0.3;
                 
               }*/
-          p{
-            @include screen("breakpoint-med-small"){
-              line-height: 13px;
-            }
-            
-
-          }  }
-i{
-  color:$m-grey;
-  font-size: 20px;
-  opacity: 0.3;
-  @include padding(null,20px,null,null);
-
-  @include screen("breakpoint-med-small"){
-    font-size:10px;
-    @include padding(null,10px,null,null);
-}
-}
-
-          
-            a {
-              opacity: 0.7;
-              text-decoration: none;
-              font-size:13px;
-              line-height:31px;
-              font-weight:400;
-              color:$m-grey;
-            }
-        
-            .col-small {
-                display: flex;
-                flex-direction: column;
-
-                
-            }
-      
-              }
+    p {
+      @include screen("breakpoint-med-small") {
+        line-height: 13px;
+      }
+    }
+  }
+  i {
     
+    color: $m-grey;
+    font-size: 20px;
+    opacity: 0.3;
+    &:hover {
+      color: $base-green;
+      opacity:1;
+    }
+    @include padding(null, 20px, null, null);
+
+    @include screen("breakpoint-med-small") {
+      font-size: 10px;
+      @include padding(null, 10px, null, null);
+    }
+  }
+
+  a {
+    opacity: 0.7;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 31px;
+    font-weight: 400;
+    color: $m-grey;
+  }
+
+  .col-small {
+    display: flex;
+    flex-direction: column;
+  }
 
 
 /*classe{
@@ -87,35 +108,104 @@ i{
     color:$m-grey;
   }*/
 
-  
-  h4 {
-    font-size:13px;
-    font-weight:700;
-    color:$m-grey;
-    @include margin(null,null,20px,null);
+h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: $m-grey;
+  @include margin(null, null, 20px, null);
 
-    @include screen("breakpoint-med-small"){
-      font-size:9px;
-      @include margin(null,null,10px,null);
-    }
+  @include screen("breakpoint-med-small") {
+    font-size: 9px;
+    @include margin(null, null, 10px, null);
   }
-  
-  /*.contacts {
+
+  @include screen("breakpoint-small") {
+    display: none;
+  }
+}
+/*.contacts {
     font-size:13px;
     line-height:18px;
     color:$m-grey;
     font-weight: 400;
   }*/
 
-  address {
-    display: flex;
-    flex-direction: column;
-      a {
-          text-decoration: none;
-          color: $m-grey;
-          font-size: 13px;
-          line-height: 18px;
-          @include padding(null,null,20px,null);
-      }
+address {
+  display: flex;
+  flex-direction: column;
+  a {
+    text-decoration: none;
+    color: $m-grey;
+    font-size: 13px;
+    line-height: 18px;
+    @include padding(null, null, 20px, null);
   }
+}
+
+label {
+  display: none;
+  @include screen("breakpoint-small") {
+    display: block;
+    font-size: 13px;
+    color: #333333;
+    font-weight: 700;
+  }
+}
+
+.info {
+  @include screen("breakpoint-small") {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    max-height: 0;
+    flex-direction: column;
+    overflow: hidden;
+  }
+}
+#showContacts:checked ~ .info {
+  @include screen("breakpoint-small") {
+    max-height: 100%;
+  }
+}
+
+#showCategories:checked ~ .link-row {
+  @include screen("breakpoint-small") {
+    max-height: 100%;
+  }
+}
+
+.abouts {
+  display: flex;
+  flex-direction: column;
+  @include screen("breakpoint-small") {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    max-height: 0;
+    flex-direction: column;
+    overflow: hidden;
+  }
+}
+
+#showAbouts:checked ~ .abouts {
+  @include screen("breakpoint-small") {
+    max-height: 100%;
+  }
+}
+input{
+  display: none;
+}
+label{
+  @include screen("breakpoint-small") {
+    @include padding(20px, null,20px,null);
+}
+
+i{
+  @include screen("breakpoint-small") {
+    @include padding(null,null,null,null);
+  }
+}
+}
 }

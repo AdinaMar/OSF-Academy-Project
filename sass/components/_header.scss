@@ -541,7 +541,10 @@ li {
          @include margin(auto,null,null,null);
          height:55px;
          background: $base-darkblue;
-
+         position:absolute;
+         bottom:0;
+         right:0;
+         left:0;
 }
 i{
     @include screen("breakpoint-small") {
@@ -613,6 +616,8 @@ i{
             color:$base-green;
         }
     }
+
+    
 }
    
 

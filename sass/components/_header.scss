@@ -1,5 +1,4 @@
-nav {
-
+nav{
     .icons {
          align-items: center;
          justify-content: center;
@@ -10,6 +9,8 @@ nav {
          cursor: pointer;
          .circle{
              position:relative;
+           
+
 
              .bag{
                  width:25px;
@@ -25,11 +26,19 @@ nav {
                  display: flex;
                  align-items: center;
                  justify-content: center;
+                 @include screen("breakpoint-med-small") {
+                    width: 15px;
+                    height:15px;
+                    top:-5px;
+                    right:-20%;
+                    
+                }
+                
              }
          }
          i{
              text-align: center;
-             vertical-align: middle;
+            /* vertical-align: middle;*/
              @include padding(null, 22px, null, 22px);
              font-size: 25px;
 
@@ -185,6 +194,7 @@ nav {
         align-items: center;
         width: auto;
         justify-content: center;
+        z-index: 99;
     }
 
   
@@ -249,7 +259,7 @@ li {
     @include padding(null,10px,null,10px);
 
     @include screen("breakpoint-med-small") {
-       font-size: pt-to-px(12);
+       font-size: 12px;
        @include padding(null,9px,null,9px);
       
     }
@@ -277,6 +287,7 @@ li {
         font-size: pt-to-px(14);
         font-weight: 900;
         line-height:  pt-to-px(55);
+        
        /* @include padding(null,10px, null,null);
         @include screen("breakpoint-small") {*/
             @include padding(null,22px,null,22px);
@@ -304,7 +315,7 @@ li {
         top: 85px;
         opacity: 0;
         visibility: hidden;
-      z-index: 1;
+        z-index: 99;
 
        
         
@@ -316,6 +327,7 @@ li {
          visibility: visible;
           max-height:0px;
           overflow: hidden;
+         
         }
 
 
@@ -618,6 +630,31 @@ i{
     }
 
     
+}
+
+.circle{
+    position:relative;
+  
+
+
+    .bag{
+        width:25px;
+        height:25px;
+        margin:0;
+        border-radius: 50%;
+        position: absolute;
+        top: -10px;
+        right:10%;
+        color: $base-green;
+        background: $base-darkblue;
+        border: 2px solid $base-green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    
+       
+    }
 }
    
 

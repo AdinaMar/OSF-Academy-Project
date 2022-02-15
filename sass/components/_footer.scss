@@ -13,9 +13,13 @@ footer {
 
   .copies {
     @include margin(null, null, 20px, null);
+   
   }
   .addresses {
     @include margin(null, null, 20px, null);
+    @include screen("breakpoint-med-small") {
+      font-size: 15px;
+    }
   }
 
   .coll {

@@ -87,11 +87,15 @@ forCell.addEventListener("click", showLogin);
 const favCounter = document.querySelectorAll(".count");
 const heartShop = document.querySelector("#heartCounter");
 
+const heartShopMobile = document.querySelector("#heartCounterCell");
+const favCounterMobile = document.querySelector("#counterCell");
+
 let counter= 0;
 for(let i=0; i<favCounter.length; i++){
 favCounter[i].addEventListener("click", ()=>{
     counter+=1 ;
     heartShop.innerHTML = counter;
+    heartShopMobile.innerHTML = counter;
 
 })
 }
@@ -104,6 +108,7 @@ for(let i=0; i<bags.length;i++){
     bags[i].addEventListener("click", ()=>{
         counting +=1;
         shopping.innerHTML= counting;
+        favCounterMobile.innerHTML = counting;
     })
 }
 

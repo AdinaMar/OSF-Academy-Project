@@ -1,0 +1,305 @@
+.carusel-container {
+  
+  display: flex;
+  flex-direction: row;
+  @include margin(17px,52px,17px,52px);
+ 
+  .palmier {
+    display: flex;
+    flex-direction: column;
+    @include screen("breakpoint-small") {
+        display: none;
+    }
+        img{
+            @include screen("breakpoint-med-small") {
+                height:280px;
+                width:230px;
+            }
+        }
+    
+
+    .overlay {
+      position: relative;
+
+      .text-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /*justify-content: center;*/
+
+        h2 {
+          font-weight: 700;
+          font-size: 100px;
+          color: #fff;
+          @include padding(40px, auto, 30px, auto);
+
+          @include screen("breakpoint-med-small") {
+            @include padding(30px, auto, 30px, auto);
+            font-size:55px;
+          }
+        }
+        h3 {
+          color: #fff;
+          font-size: 24px;
+          line-height: 30px;
+          font-weight: 400;
+          width: 120px;
+          text-align: center;
+        }
+      }
+    }
+
+    .additional {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     h4 {
+        font-size: 18px;
+        color: $m-grey;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: center; 
+        @include margin(42px,auto,auto,auto);
+        @include screen("breakpoint-med-small") {
+            @include margin(8px,auto,auto,auto);
+        }
+      }
+      p{
+          color:$m-grey;
+          font-size: 13px;
+          width: 195px;
+          font-weight: 400;
+          text-align: center;
+          
+          @include margin(17px,auto,32px,auto);
+
+          @include screen("breakpoint-med-small") {
+            @include margin(10px,auto,8px,auto);
+        }
+
+      }
+    a{
+        button{
+            width:147px;
+            height:36px;
+            border-radius: 19px;
+            background-color:#fff;
+            border: 2px solid $base-blue;
+            display: flex;
+            align-items: center;
+            
+            
+           
+            span{ color:$base-blue;
+            font-size: 14px;
+            font-weight: 400;
+            @include margin(13px, 60px,13px,28px);
+
+
+
+            }
+       i{
+           color: $base-blue;
+           font-size: 17px;
+           @include margin(11px, null,8px,23px);
+
+           @include screen("breakpoint-med-small") {
+            @include margin(8px,null,4px,20px);
+        }
+       } 
+    }
+    }
+}
+  
+
+}
+
+
+.carousel { 
+    @include padding(auto,30px,auto,auto);
+    position: relative;
+    @include screen("breakpoint-small") {
+        @include margin(auto,10px,auto,10px);
+    }
+
+.carousel-overlay{
+position: relative;
+img {
+    width: 870px;
+    height: 505px;
+    object-fit: cover;
+    border-radius: 5px;
+
+    @include screen("breakpoint-small") {
+        width:290px;
+        height:472px;
+       
+            
+        
+    }
+    @include screen("breakpoint-med-small") {
+        width:420px;
+        height:390px;
+    }
+    
+}
+
+.text-carousel-overlay1{
+
+    position: absolute;
+    top:79px;
+    right:0;
+    left:60px;
+    bottom: 0;
+    width: 559px;
+    height: 322px;
+    display: flex;
+    flex-direction: column;
+    @include screen("breakpoint-small") {
+        width: 100%;
+        height: 100%;
+        top:0;
+    right:0;
+    left:0;
+    bottom: 0;
+}
+@include screen("breakpoint-med-small") {
+    width: 100%;
+    height: 100%;
+    top:39px;
+    left:30px;
+}
+}
+    
+.text-carousel-overlay2{
+
+    position: absolute;
+    top:79px;
+    right:0;
+    left:170px;
+    bottom: 0;
+    width: 559px;
+    height: 322px;
+    display: flex;
+    flex-direction: column;
+    @include screen("breakpoint-small") {
+        width: 100%;
+        height: 100%;
+        top:0;
+        right:0;
+        left:0;
+        bottom: 0;
+}
+@include screen("breakpoint-med-small") {
+    width: 100%;
+    height: 100%;
+    top:39px;
+    left:30px;
+}
+}
+.text-carousel-overlay3{
+
+    position: absolute;
+    top:79px;
+    right:0;
+    left:290px;
+    bottom: 0;
+    width: 559px;
+    height: 322px;
+    display: flex;
+    flex-direction: column;
+    @include screen("breakpoint-small") {
+        width: 100%;
+        height: 100%;
+        top:0;
+        right:0;
+        left:0;
+        bottom: 0;
+}
+@include screen("breakpoint-med-small") {
+    width: 100%;
+    height: 100%;
+    top:39px;
+    left:30px;
+}
+}
+
+    h1{
+        color: #fff;
+        font-size:48px;
+        font-weight: 700;
+        width:559px;
+        height:93px;
+        font-family: "Myriad Pro";
+        @include margin(null,null,114px,null);
+
+        @include screen("breakpoint-small") {
+            width:260px;
+            height:88px;
+            font-size:28px;
+            @include margin(31px,14px,31,14px);
+    }
+    @include screen("breakpoint-med-small") {
+        font-size:28px;
+        width:339px;
+        height:53px;
+    }
+    
+}
+    p{
+        font-size: 14px;
+        color:#fff;
+        font-weight: 400;
+        width:336px;
+        height:31px;
+        font-family: "Myriad Pro";
+        @include margin(null,null,48px,null);
+
+        @include screen("breakpoint-small") {
+            width:258px;
+            height:132px;
+            text-align: center;
+            @include margin(null,null,10px,null);
+    }
+}
+
+    
+     
+        
+        button {
+            border:2px solid rgba(255,255,255, .5);
+            background-color: transparent;
+            
+            border-radius: 20px;
+           width:147px;
+            height:36px;
+            font-size: 14px;
+        color:#fff;
+        font-weight: 400;
+      /*  @include padding(13px,33px,13px,33px);*/
+        cursor: pointer;
+        
+        @include screen("breakpoint-small") {
+            @include margin(null,77px,70px,77px);
+        }
+
+}
+
+.swiper-pagination{
+    position: absolute;
+    bottom:40px;
+}
+}
+    }
+
+}
+
+ 

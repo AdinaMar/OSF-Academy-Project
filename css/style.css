@@ -1257,6 +1257,378 @@ footer input {
     padding-bottom: 20px;
   }
 }
+.carusel-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 17px;
+  margin-right: 52px;
+  margin-bottom: 17px;
+  margin-left: 52px;
+}
+.carusel-container .palmier {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .carusel-container .palmier {
+    display: none;
+  }
+}
+@media only screen and (min-width:768px) and (max-width:1279px) {
+  .carusel-container .palmier img {
+    height: 280px;
+    width: 230px;
+  }
+}
+.carusel-container .palmier .overlay {
+  position: relative;
+}
+.carusel-container .palmier .overlay .text-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*justify-content: center;*/
+}
+.carusel-container .palmier .overlay .text-overlay h2 {
+  font-weight: 700;
+  font-size: 100px;
+  color: #fff;
+  padding-top: 40px;
+  padding-right: auto;
+  padding-bottom: 30px;
+  padding-left: auto;
+}
+@media only screen and (min-width:768px) and (max-width:1279px) {
+  .carusel-container .palmier .overlay .text-overlay h2 {
+    padding-top: 30px;
+    padding-right: auto;
+    padding-bottom: 30px;
+    padding-left: auto;
+    font-size: 55px;
+  }
+}
+.carusel-container .palmier .overlay .text-overlay h3 {
+  color: #fff;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400;
+  width: 120px;
+  text-align: center;
+}
+.carusel-container .palmier .additional {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.carusel-container .palmier .additional h4 {
+  font-size: 18px;
+  color: #45413e;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  margin-top: 42px;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+}
+@media only screen and (min-width:768px) and (max-width:1279px) {
+  .carusel-container .palmier .additional h4 {
+    margin-top: 8px;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+  }
+}
+.carusel-container .palmier .additional p {
+  color: #45413e;
+  font-size: 13px;
+  width: 195px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 17px;
+  margin-right: auto;
+  margin-bottom: 32px;
+  margin-left: auto;
+}
+@media only screen and (min-width:768px) and (max-width:1279px) {
+  .carusel-container .palmier .additional p {
+    margin-top: 10px;
+    margin-right: auto;
+    margin-bottom: 8px;
+    margin-left: auto;
+  }
+}
+.carusel-container .palmier .additional a button {
+  width: 147px;
+  height: 36px;
+  border-radius: 19px;
+  background-color: #fff;
+  border: 2px solid #3a5b96;
+  display: flex;
+  align-items: center;
+}
+.carusel-container .palmier .additional a button span {
+  color: #3a5b96;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 13px;
+  margin-right: 60px;
+  margin-bottom: 13px;
+  margin-left: 28px;
+}
+.carusel-container .palmier .additional a button i {
+  color: #3a5b96;
+  font-size: 17px;
+  margin-top: 11px;
+  margin-bottom: 8px;
+  margin-left: 23px;
+}
+@media only screen and (min-width:768px) and (max-width:1279px) {
+  .carusel-container .palmier .additional a button i {
+    margin-top: 8px;
+    margin-bottom: 4px;
+    margin-left: 20px;
+  }
+}
+.carusel-container .carousel {
+  padding-top: auto;
+  padding-right: 30px;
+  padding-bottom: auto;
+  padding-left: auto;
+  position: relative;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .carusel-container .carousel {
+    margin-top: auto;
+    margin-right: 10px;
+    margin-bottom: auto;
+    margin-left: 10px;
+  }
+}
+.carusel-container .carousel .carousel-overlay {
+  position: relative;
+}
+.carusel-container .carousel .carousel-overlay img {
+  width: 870px;
+  height: 505px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .carusel-container .carousel .carousel-overlay img {
+    width: 290px;
+    height: 472px;
+  }
+}
+@media only screen and (min-width:768px) and (max-width:1279px) {
+  .carusel-container .carousel .carousel-overlay img {
+    width: 420px;
+    height: 390px;
+  }
+}
+.carusel-container .carousel .carousel-overlay .text-carousel-overlay1 {
+  position: absolute;
+  top: 79px;
+  right: 0;
+  left: 60px;
+  bottom: 0;
+  width: 559px;
+  height: 322px;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .carusel-container .carousel .carousel-overlay .text-carousel-overlay1 {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
+@media only screen and (min-width:768px) and (max-width:1279px) {
+  .carusel-container .carousel .carousel-overlay .text-carousel-overlay1 {
+    width: 100%;
+    height: 100%;
+    top: 39px;
+    left: 30px;
+  }
+}
+.carusel-container .carousel .carousel-overlay .text-carousel-overlay2 {
+  position: absolute;
+  top: 79px;
+  right: 0;
+  left: 170px;
+  bottom: 0;
+  width: 559px;
+  height: 322px;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .carusel-container .carousel .carousel-overlay .text-carousel-overlay2 {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
+@media only screen and (min-width:768px) and (max-width:1279px) {
+  .carusel-container .carousel .carousel-overlay .text-carousel-overlay2 {
+    width: 100%;
+    height: 100%;
+    top: 39px;
+    left: 30px;
+  }
+}
+.carusel-container .carousel .carousel-overlay .text-carousel-overlay3 {
+  position: absolute;
+  top: 79px;
+  right: 0;
+  left: 290px;
+  bottom: 0;
+  width: 559px;
+  height: 322px;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .carusel-container .carousel .carousel-overlay .text-carousel-overlay3 {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
+@media only screen and (min-width:768px) and (max-width:1279px) {
+  .carusel-container .carousel .carousel-overlay .text-carousel-overlay3 {
+    width: 100%;
+    height: 100%;
+    top: 39px;
+    left: 30px;
+  }
+}
+.carusel-container .carousel .carousel-overlay h1 {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  width: 559px;
+  height: 93px;
+  font-family: "Myriad Pro";
+  margin-bottom: 114px;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .carusel-container .carousel .carousel-overlay h1 {
+    width: 260px;
+    height: 88px;
+    font-size: 28px;
+    margin-top: 31px;
+    margin-right: 14px;
+    margin-bottom: 31;
+    margin-left: 14px;
+  }
+}
+@media only screen and (min-width:768px) and (max-width:1279px) {
+  .carusel-container .carousel .carousel-overlay h1 {
+    font-size: 28px;
+    width: 339px;
+    height: 53px;
+  }
+}
+.carusel-container .carousel .carousel-overlay p {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
+  width: 336px;
+  height: 31px;
+  font-family: "Myriad Pro";
+  margin-bottom: 48px;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .carusel-container .carousel .carousel-overlay p {
+    width: 258px;
+    height: 132px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+.carusel-container .carousel .carousel-overlay button {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  border-radius: 20px;
+  width: 147px;
+  height: 36px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
+  /*  @include padding(13px,33px,13px,33px);*/
+  cursor: pointer;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .carusel-container .carousel .carousel-overlay button {
+    margin-right: 77px;
+    margin-bottom: 70px;
+    margin-left: 77px;
+  }
+}
+.carusel-container .carousel .carousel-overlay .swiper-pagination {
+  position: absolute;
+  bottom: 40px;
+}
+
+.banner2 {
+  position: relative;
+}
+.banner2 img {
+  width: 100%;
+  height: auto;
+}
+.banner2 .overlay2-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.banner2 .overlay2-text h1 {
+  font-size: 48px;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 41px;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .banner2 .overlay2-text h1 {
+    font-size: 38px;
+  }
+}
+.banner2 .overlay2-text h3 {
+  width: 332px;
+  height: 28px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+}
+
 * {
   font-family: "Lato", sans-serif;
   padding: 0;

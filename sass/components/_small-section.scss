@@ -1,0 +1,67 @@
+.small-section{
+    display: flex;
+    flex-direction: row;
+    background-color:$m-grey;
+    grid-gap:100px;
+   
+    
+    @include padding(56px,63px,75px,63px);
+
+    @include screen("breakpoint-small") {
+        flex-direction: column;
+        grid-gap:60px;
+        
+
+    }
+
+    i{
+        color: $base-green;
+        font-size: 60px;
+        @include padding(null,36px,null,null);
+        @include screen("breakpoint-med-small") {
+            font-size:40px;
+        }
+        @include screen("breakpoint-small") {
+            @include padding(null,36px,null,36px);
+    }
+}
+
+    .package{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+       /* @include padding(null,null,null,93px);*/
+
+      /*  @include screen("breakpoint-med-small") {
+            @include padding(null,null,null,43px);
+
+        }*/
+
+    
+
+    &:nth-child(odd){
+        @include screen("breakpoint-small") {
+            flex-direction: row-reverse;
+    }
+    }
+
+    
+    h2{
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+       
+        color: #ffffff;
+        @include padding(null,null,22px,null);
+    
+    }
+    p{
+        color: #868380;
+        font-size:14px;
+        font-weight: 400;
+        line-height:18px;
+    }
+}
+}

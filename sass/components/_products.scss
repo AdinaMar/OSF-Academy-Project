@@ -7,7 +7,7 @@
 
   /*@include padding(null,59px,null,59px);*/
 
-  .containerProducts {
+  .containerProducts, .prodotto {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 25px;
@@ -33,7 +33,7 @@
 
   /* @include padding(null,70px,null,59px);*/
 
-  .small-container {
+  .small-container, article {
     position: relative;
     height: 366px;
     width: 271px;
@@ -229,6 +229,9 @@
       @include padding(8px, 60px, 8px, 60px);
     }
   }
+
+ 
+
 }
 
 /* h2 {
@@ -290,6 +293,8 @@
         align-items: center;*/
     }
   }
+
+}
   .swiper-slide img {
     @include screen("breakpoint-small") {
       display: block;
@@ -302,5 +307,4 @@
 
 .swiper-pagination-bullet{
     background: var(--swiper-pagination-bullet-inactive-color,#fff);
-}
 }

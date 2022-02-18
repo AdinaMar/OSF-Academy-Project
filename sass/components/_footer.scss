@@ -5,6 +5,7 @@ footer {
   align-items: center;
   justify-content: space-around;
   width: 100%;
+  @include margin(70px,null,null,null);
 
   @include screen("breakpoint-small") {
     flex-direction: column;

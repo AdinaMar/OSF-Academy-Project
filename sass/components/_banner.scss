@@ -1,8 +1,13 @@
 .carusel-container {
-  
+   
   display: flex;
   flex-direction: row;
   @include margin(17px,52px,17px,52px);
+  @include screen("breakpoint-small") {
+    align-items: center;
+    justify-content: center;
+   /* @include margin(17px,null,17px,null);*/
+}
  
   .palmier {
     display: flex;
@@ -127,7 +132,7 @@
     @include padding(auto,30px,auto,auto);
     position: relative;
     @include screen("breakpoint-small") {
-        @include margin(auto,10px,auto,10px);
+       justify-self: center;
     }
 
 .carousel-overlay{

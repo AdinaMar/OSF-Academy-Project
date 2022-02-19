@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap");
 /*$breakpoint-small: 320px;
 $breakpoint-med-small: 768px;
@@ -736,7 +737,37 @@ nav input {
   justify-content: center;
   align-items: center;
   /*@include padding(null,59px,null,59px);*/
-  /* @include padding(null,70px,null,59px);*/
+  /* h2 {
+     display: flex;
+     flex-direction: row;
+      text-align: center;
+      font-size:24px;
+      color:white;
+      font-weight:700;
+      @include margin(89px, null,null,null);
+      @include padding(null,null,41px,null);
+
+      h2:before, h2:after{
+         content: "";
+         flex: 1 1;
+         border-bottom: 1px solid;
+         margin: auto;
+       }
+       h2:before {
+         margin-right: 10px
+       }
+       h2:after {
+         margin-left: 10px
+       }
+  }*/
+  /*.title:after,
+   .title:before{
+     content:"\00a0\00a0\00a0\00a0\00a0";
+     text-decoration:line-through;
+     width: 100%;
+     color: white;
+
+  }*/
 }
 .products .containerProducts, .products .prodotto {
   display: grid;
@@ -749,6 +780,7 @@ nav input {
   padding-left: 59px;
   width: 100%;
   margin-left: -50px;
+  /* @include padding(null,70px,null,59px);*/
 }
 @media only screen and (min-width:768px) and (max-width:1279px) {
   .products .containerProducts, .products .prodotto {
@@ -770,7 +802,9 @@ nav input {
     /*@include padding(0px,auto,59px,auto);*/
   }
 }
-.products .small-container, .products article {
+.products .containerProducts .small-container,
+.products .containerProducts article, .products .prodotto .small-container,
+.products .prodotto article {
   position: relative;
   height: 366px;
   width: 271px;
@@ -779,18 +813,24 @@ nav input {
   display: flex;
   flex-direction: column;
   /*@include padding(null,70px,null,59px);
-          @include margin(null,30px,null,30px);*/
+        @include margin(null,30px,null,30px);*/
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
-  .products .small-container, .products article {
+  .products .containerProducts .small-container,
+.products .containerProducts article, .products .prodotto .small-container,
+.products .prodotto article {
     margin-right: -12px;
     margin-left: -12px;
   }
 }
-.products .small-container:hover .productIcons, .products article:hover .productIcons {
+.products .containerProducts .small-container:hover .productIcons,
+.products .containerProducts article:hover .productIcons, .products .prodotto .small-container:hover .productIcons,
+.products .prodotto article:hover .productIcons {
   opacity: 0.9;
 }
-.products .small-container:nth-child(8):after, .products article:nth-child(8):after {
+.products .containerProducts .small-container:nth-child(8):after,
+.products .containerProducts article:nth-child(8):after, .products .prodotto .small-container:nth-child(8):after,
+.products .prodotto article:nth-child(8):after {
   content: "";
   position: absolute;
   top: 0;
@@ -801,19 +841,25 @@ nav input {
   opacity: 0.8;
   border-radius: 10px;
 }
-.products .small-container:nth-child(8) img, .products article:nth-child(8) img {
-  height: 366px;
-  width: 271px;
+.products .containerProducts .small-container:nth-child(8) img,
+.products .containerProducts article:nth-child(8) img, .products .prodotto .small-container:nth-child(8) img,
+.products .prodotto article:nth-child(8) img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 10px;
 }
-.products .small-container:nth-child(8) .text, .products article:nth-child(8) .text {
+.products .containerProducts .small-container:nth-child(8) .text,
+.products .containerProducts article:nth-child(8) .text, .products .prodotto .small-container:nth-child(8) .text,
+.products .prodotto article:nth-child(8) .text {
   position: absolute;
   bottom: 40px;
   left: 20px;
   z-index: 1;
 }
-.products .small-container:nth-child(8) .text p, .products article:nth-child(8) .text p {
+.products .containerProducts .small-container:nth-child(8) .text p,
+.products .containerProducts article:nth-child(8) .text p, .products .prodotto .small-container:nth-child(8) .text p,
+.products .prodotto article:nth-child(8) .text p {
   color: #fff;
   font-size: 16px;
   font-weight: 400;
@@ -821,17 +867,21 @@ nav input {
   height: 60px;
   line-height: 24px;
 }
-.products .small-container:nth-child(8) .text i, .products article:nth-child(8) .text i {
+.products .containerProducts .small-container:nth-child(8) .text i,
+.products .containerProducts article:nth-child(8) .text i, .products .prodotto .small-container:nth-child(8) .text i,
+.products .prodotto article:nth-child(8) .text i {
   font-size: 20px;
   color: #23c46e;
   margin-right: 10px;
 }
-.products .small-container:nth-child(8) .text span, .products article:nth-child(8) .text span {
+.products .containerProducts .small-container:nth-child(8) .text span,
+.products .containerProducts article:nth-child(8) .text span, .products .prodotto .small-container:nth-child(8) .text span,
+.products .prodotto article:nth-child(8) .text span {
   font-size: 14px;
   font-weight: 400;
   color: #fff;
 }
-.products .small-container .productIcons, .products article .productIcons {
+.products .containerProducts .productIcons, .products .prodotto .productIcons {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -846,7 +896,7 @@ nav input {
   justify-content: space-around;
   border-radius: 10px;
 }
-.products .small-container .productIcons .fa-plus, .products article .productIcons .fa-plus {
+.products .containerProducts .productIcons .fa-plus, .products .prodotto .productIcons .fa-plus {
   background-color: #fff;
   color: #23c46e;
   font-size: 50px;
@@ -856,7 +906,7 @@ nav input {
   padding-left: 20px;
   border-radius: 50%;
 }
-.products .small-container .productIcons .fa-heart, .products article .productIcons .fa-heart {
+.products .containerProducts .productIcons .fa-heart, .products .prodotto .productIcons .fa-heart {
   background-color: #fff;
   color: #e73c68;
   font-size: 50px;
@@ -867,19 +917,19 @@ nav input {
   border-radius: 50%;
   cursor: pointer;
 }
-.products .small-container img, .products article img {
+.products .containerProducts img, .products .prodotto img {
   object-fit: cover;
   width: 271px;
   height: 261px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 }
-.products .small-container .text, .products article .text {
+.products .containerProducts .text, .products .prodotto .text {
   text-align: center;
 }
-.products .small-container .text p, .products article .text p {
+.products .containerProducts .text p, .products .prodotto .text p {
   /* justify-self: center;
-          align-self: center;*/
+        align-self: center;*/
   margin-top: 20px;
   margin-right: auto;
   margin-bottom: 20px;
@@ -889,7 +939,7 @@ nav input {
   line-height: 18px;
   font-weight: 400;
 }
-.products .small-container .text .price, .products article .text .price {
+.products .containerProducts .text .price, .products .prodotto .text .price {
   color: #011847;
   font-size: 14px;
   font-weight: 400;
@@ -898,7 +948,7 @@ nav input {
   margin-bottom: 0px;
   margin-left: 0px;
 }
-.products .small-container button, .products article button {
+.products .containerProducts button, .products .prodotto button {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -912,7 +962,7 @@ nav input {
   border: 2px solid #999999;
   background-color: #fff;
 }
-.products .small-container button #price, .products article button #price {
+.products .containerProducts button #price, .products .prodotto button #price {
   color: #84bc22;
   padding-top: 11px;
   padding-right: 21px;
@@ -923,7 +973,7 @@ nav input {
   margin-bottom: 0px;
   margin-left: 0px;
 }
-.products .small-container button a, .products article button a {
+.products .containerProducts button a, .products .prodotto button a {
   border-left: 2px solid #999999;
   align-self: center;
   font-size: 14px;
@@ -979,46 +1029,61 @@ nav input {
   padding-bottom: 8px;
   padding-left: 60px;
 }
+.products .load {
+  margin-top: 51px;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border: 2px solid #e8e2d6;
+  border-radius: 25px;
+  background-color: #1e1d22;
+  padding-top: 13px;
+  padding-right: 69px;
+  padding-bottom: 13px;
+  padding-left: 69px;
+}
+.products .load p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.products .load i {
+  color: #ffffff;
+  padding-right: 24px;
+  padding-left: 24px;
+  font-size: 20px;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .products .load {
+    display: none;
+  }
+}
+.products .prodotto {
+  display: none;
+}
+.products .prodotto.active {
+  display: grid;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .products .prodotto {
+    display: none;
+  }
+}
 
-/* h2 {
-    display: flex;
-    flex-direction: row;
-     text-align: center;
-     font-size:24px;
-     color:white;
-     font-weight:700;
-     @include margin(89px, null,null,null);
-     @include padding(null,null,41px,null);
-
-     h2:before, h2:after{
-        content: "";
-        flex: 1 1;
-        border-bottom: 1px solid;
-        margin: auto;
-      }
-      h2:before {
-        margin-right: 10px
-      }
-      h2:after {
-        margin-left: 10px
-      }
- }*/
-/*.title:after,
-  .title:before{
-    content:"\00a0\00a0\00a0\00a0\00a0";
-    text-decoration:line-through;
-    width: 100%;
-    color: white;
-
- }*/
+.swiper {
+  width: 100%;
+}
 @media only screen and (min-width:320px) and (max-width:767px) {
   .swiper {
-    width: 100%;
+    /* width: 100%;*/
     height: 100%;
   }
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
   .swiper .swiper-slide {
+    width: 0px;
     /* text-align: center;*/
     /* font-size: 18px;*/
     /* background: #fff;*/
@@ -1848,13 +1913,220 @@ footer input {
   line-height: 18px;
 }
 
+.error-page {
+  background-color: #f1edea;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.error-page ul.breadcrumb {
+  padding-top: 47px;
+  padding-right: 16px;
+  padding-bottom: 19px;
+  padding-left: 16px;
+  list-style: none;
+}
+.error-page ul.breadcrumb li {
+  display: inline;
+  font-size: 14px;
+  font-weight: 400;
+}
+.error-page ul.breadcrumb li + li:before {
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  color: black;
+  content: "/ ";
+}
+.error-page ul.breadcrumb li a {
+  color: #84bc22;
+  text-decoration: none;
+}
+.error-page h1 {
+  text-align: center;
+  font-size: 48px;
+  color: #45413e;
+  font-weight: 700;
+  margin-top: 26px;
+  position: relative;
+  z-index: 1;
+}
+.error-page h1::before {
+  content: "";
+  display: block;
+  width: 800px;
+  height: 2px;
+  background-color: #e5e2df;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: -1;
+}
+.error-page h1::after {
+  content: "";
+  display: block;
+  width: 800px;
+  height: 2px;
+  background-color: #e5e2df;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: -1;
+}
+.error-page h1 span {
+  background-color: #f1edea;
+  padding-right: 33px;
+  padding-left: 33px;
+}
+.error-page .big-section {
+  border-radius: 8px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 41px;
+  margin-right: 55px;
+  margin-bottom: 41px;
+  margin-left: 55px;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .error-page .big-section {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin-top: 24px;
+    margin-right: 35px;
+    margin-bottom: 21px;
+    margin-left: 35px;
+  }
+}
+.error-page .big-section .ops {
+  position: relative;
+  padding-right: 103px;
+}
+@media only screen and (min-width:768px) and (max-width:1279px) {
+  .error-page .big-section .ops {
+    position: static;
+  }
+}
+@media only screen and (min-width:768px) and (max-width:1279px) {
+  .error-page .big-section .ops {
+    padding-right: 13px;
+  }
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .error-page .big-section .ops {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    position: relative;
+    left: 30%;
+  }
+}
+.error-page .big-section .ops i {
+  font-size: 300px;
+  color: #f1edea;
+  opacity: 0.3;
+  padding-top: 63px;
+  padding-left: 63px;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .error-page .big-section .ops i {
+    display: none;
+  }
+}
+@media only screen and (min-width:768px) and (max-width:1279px) {
+  .error-page .big-section .ops i {
+    display: none;
+  }
+}
+.error-page .big-section .ops .ops-over {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 105px;
+  height: 100%;
+  width: 100%;
+}
+@media only screen and (min-width:768px) and (max-width:1279px) {
+  .error-page .big-section .ops .ops-over {
+    position: static;
+  }
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .error-page .big-section .ops .ops-over {
+    align-items: flex-start;
+    left: 0;
+    position: absolute;
+  }
+}
+.error-page .big-section .ops .ops-over h2 {
+  color: #84bc22;
+  font-size: 113px;
+  line-height: 60px;
+  font-weight: 700;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .error-page .big-section .ops .ops-over h2 {
+    font-size: 60px;
+  }
+}
+.error-page .big-section .text-error {
+  display: flex;
+  flex-direction: column;
+  padding-top: 71px;
+  padding-right: 71px;
+  padding-bottom: 71px;
+  padding-left: 71px;
+}
+.error-page .big-section .text-error h2 {
+  font-size: 24px;
+  font-weight: 900;
+  padding-bottom: 28px;
+}
+.error-page .big-section .text-error p {
+  font-size: 16px;
+  line-height: 24px;
+  padding-bottom: 20px;
+}
+.error-page .big-section .text-error p:nth-child(4) {
+  color: #84bc22;
+  padding-top: 6px;
+  padding-bottom: 67px;
+}
+.error-page .big-section .text-error .search {
+  position: relative;
+}
+.error-page .big-section .text-error .search input {
+  border: 2px solid #45413e;
+  background-color: white;
+  width: 100%;
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+.error-page .big-section .text-error .search i {
+  position: absolute;
+  top: 12px;
+  right: 28px;
+}
+
 * {
   font-family: "Lato", sans-serif;
   padding: 0;
   margin: 0;
   text-decoration: none;
   box-sizing: border-box;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 html {

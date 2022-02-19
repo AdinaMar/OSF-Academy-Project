@@ -45,10 +45,10 @@ const enableSwiper = function() {
        loop: true,
        slidesPerView: 1,
        centeredSlides: true,
-       spaceBetween: 80,
+       spaceBetween: 90,
        grabCursor: true,
        
-       width: 290,
+       width: 271,
    
        pagination: {
          el: ".swiper-pagination",

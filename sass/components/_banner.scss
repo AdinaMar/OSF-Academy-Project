@@ -129,6 +129,15 @@
 
 
 .carousel { 
+    .swiper-pagination-bullets {
+  
+        position: absolute;
+        bottom:40px;
+        span{
+            background-color: #fff;
+        }
+    
+    }
     @include padding(auto,30px,auto,auto);
     position: relative;
     @include screen("breakpoint-small") {
@@ -298,10 +307,17 @@ img {
 
 }
 
-.swiper-pagination{
+
+
+
+/*.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+   /* position: absolute;*/
+   /* bottom:0px;} */
+
+/*.swiper-pagination {
     position: absolute;
-    bottom:40px;
-}
+    bottom:70px;
+} */
 }
     }
 

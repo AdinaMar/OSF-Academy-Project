@@ -4,7 +4,7 @@ var swiper = new Swiper(".featured1", {
     slidesPerGroup: 4,
     loop: true,
     //loopFillGroupWithBlank: true,
-
+  
     autoplay: {
         delay: 5000,
       },

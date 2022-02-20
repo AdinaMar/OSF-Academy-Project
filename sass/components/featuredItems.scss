@@ -4,6 +4,7 @@
   position: relative;
     justify-content: center;
     background-color: $base-darkblue;
+    width: 100%;
 
     @include screen("breakpoint-small") {
         display: none;

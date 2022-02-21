@@ -6,10 +6,12 @@
    
     
     @include padding(56px,63px,75px,63px);
-
+    @include screen("breakpoint-med-small") {
+        grid-gap:60px;
+    }
     @include screen("breakpoint-small") {
         flex-direction: column;
-        grid-gap:60px;
+        
         
 
     }

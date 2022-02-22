@@ -127,3 +127,21 @@ tabs.forEach((tab) => {
             document.querySelector("#first-content").classList.add("active");
         }
     window.addEventListener("load", showbefore);
+
+    ///////////////////////////////////////////images on change
+
+    $(document).ready(function(){
+        $('.big-section .pictures > img').click(function(){
+
+            var $smallImages = $(this).attr("src");
+            $('.big-section .picture > img').attr("src", $smallImages);
+        })
+    })
+
+    /////////////////////////////////scroll to top
+    const scroll = document.querySelector("#scroll");
+    function topScroll() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    scroll.addEventListener("click", topScroll);

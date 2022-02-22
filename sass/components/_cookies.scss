@@ -1,0 +1,54 @@
+.wrapper-cookies {
+    position: fixed;
+    z-index: 99;
+   left: 50%;
+   transform: translate(-50%,0);
+    bottom: 30px;
+    background: white;
+    width: 90%;
+    border-radius: 15px;
+    @include padding(28px,24px,28px,24px);
+    display: flex;
+   
+    visibility: hidden;
+   
+  &.hide {
+      opacity:0;
+      visibility: hidden;
+  }
+
+    header {
+        color: $base_green;
+        font-size:16px;
+        font-weight: 700;
+        line-height: 24px;
+        @include margin(null,null,24px,null);
+    }
+    p{
+        color:$m_grey;
+        font-size:14px;
+        line-height: 24px;
+        @include margin(null,144px,null,null);
+        span {
+            color: $base_green;
+        }
+    }
+    button {
+        background: $base-green;
+        color: white;
+        border-radius: 20px;
+        @include padding(13px,49px,13px,49px);
+        @include margin(57px,null,57px,null);
+        border: 2px solid $grey;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+
+    i{
+        position: absolute;
+        right:20px;
+        top:10px;
+        font-size: 20px;
+    }
+}

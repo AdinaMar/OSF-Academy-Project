@@ -25,6 +25,7 @@
         text-decoration: none;
       }
     }
+ 
   }
   .whole-container {
     width: 90%;
@@ -45,8 +46,26 @@
       @include margin(26px, 55px, 26px, 55px);*/
       @include screen("breakpoint-med-small") {
           flex-direction: column;
+        
 
       }
+      @include screen("breakpoint-small") {
+        flex-direction: column;
+        
+      }
+
+      .big-section {
+        display: flex;
+        flex-direction: row;
+        align-self: flex-start;
+       @include screen("breakpoint-small") {
+        
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         @include margin(null,auto,null,auto);
+       }
+     
       .picture {
         @include margin(16px, 16px, 16px, 16px);
         align-self: flex-start;
@@ -58,13 +77,37 @@
       .pictures {
         display: flex;
         flex-direction: column;
-        @include padding(27px, 33px, 239px, 33px);
+        @include margin(27px, 33px, 239px, 33px);
         grid-gap: 24px;
+        width:73px;
+        height:70px;
+        cursor: pointer;
         @include screen("breakpoint-med-small") {
-            flex-direction: row;
-            @include padding(27px, 33px, 59px, 33px);
+            flex-direction: column;
+            @include margin(27px, 33px, 59px, 33px);
         }
+        @include screen("breakpoint-small") {
+          flex-direction: row;
+          @include margin(null,null,null,null);
+        
+        
+         
+          grid-gap:18px;
+          @include margin(27px, 13px, 45px, 13px);
+          
       }
+    
+ }
+
+
+
+
+
+
+
+
+
+  }
       .infos {
         align-self: flex-start;
         @include margin(46px, 54px, 104px, 16px);
@@ -169,7 +212,11 @@
          justify-content: space-between;
           align-items: center;
           @include margin(null,null,52px,null);
-
+          @include screen("breakpoint-small") {
+            flex-direction: column;
+         
+          align-items: flex-start;
+          }
           .numbers{
               display: flex;
               align-items: center;
@@ -178,7 +225,9 @@
               border:2px solid #e8e2d6;
               border-radius: 20px;
               @include padding(10px,3px,10px,3px);
-         
+              @include screen("breakpoint-small") {
+                @include margin(null,null,32px,null);
+              }
          button, input {
              border:none;
              outline: none;
@@ -251,6 +300,9 @@ border:2px solid #e8e2d6;
 }
   
 .tabs {
+  @include screen("breakpoint-small") {
+    display: none;
+  }
     .single-tabs{
         display: flex;
         align-items: center;
@@ -287,7 +339,8 @@ border:2px solid #e8e2d6;
 }
 
        }
-}
+ 
+    }
 
 
   h1 {
@@ -341,6 +394,10 @@ border:2px solid #e8e2d6;
       @include screen("breakpoint-med-small") {
           font-size: 28px;
       }
+      @include screen("breakpoint-small") {
+        font-size:25px;
+      }
+    
     }
   }
 }
@@ -402,5 +459,26 @@ border:2px solid #e8e2d6;
           font-size: 18px;
       }
     }
+  }
+}
+
+.swiper-pagination {
+  display:none;
+  @include screen("breakpoint-small") {
+    display: block;
+  }
+}
+#scroll{
+  background: $base-green;
+  color: white;
+  border-radius: 20px;
+  @include padding(13px,27px,13px,27px);
+  @include margin(57px,null,57px,null);
+  border: 2px solid $grey;
+  cursor: pointer;
+  font-size: 14px;
+  display: none;
+  @include screen("breakpoint-small") {
+    display: block;
   }
 }

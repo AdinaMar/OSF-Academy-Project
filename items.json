@@ -1,28 +1,28 @@
 [
-    {
-        "name":"item1",
-        "price":"$300",
-        "src": "images/header/products/prod1.png",
-        "alt": "display"
-    },
+  {
+    "name": "item1",
+    "price": "$300",
+    "src": "images/header/products/prod1.png",
+    "alt": "display"
+  },
 
-    {
-        "name":"item2",
-        "price":"$300",
-        "src": "images/header/products/prod2.png",
-        "alt":"quiz"
-    },
-    {
-        "name":"item3",
-        "price":"$300",
-        "src": "images/header/products/prod3.png",
-        "alt":"keyboard"
-    },
+  {
+    "name": "item2",
+    "price": "$300",
+    "src": "images/header/products/prod2.png",
+    "alt": "quiz"
+  },
+  {
+    "name": "item3",
+    "price": "$300",
+    "src": "images/header/products/prod3.png",
+    "alt": "keyboard"
+  },
 
-    {
-        "name":"item4",
-        "price":"$300",
-        "src": "images/header/products/prod4.png",
-        "alt": "compass"
-    }
+  {
+    "name": "item4",
+    "price": "$300",
+    "src": "images/header/products/prod4.png",
+    "alt": "compass"
+  }
 ]

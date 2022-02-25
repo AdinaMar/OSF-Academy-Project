@@ -108,3 +108,14 @@ loadMore.style.display="none";
 
 loadMore.addEventListener("click", loading);
 
+
+/////////////////////////////////////
+const buyCart = document.querySelector("#buyCart");
+const incrementBuy = () => {
+counting +=1;
+shopping.innerHTML= counting;
+favCounterMobile.innerHTML = counting;
+
+}
+buyCart.addEventListener("click", incrementBuy);
+

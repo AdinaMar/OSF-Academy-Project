@@ -1,50 +1,218 @@
 @mixin padding($top, $right, $bottom, $left) {
-    padding-top: $top;
-    padding-right: $right;
-    padding-bottom: $bottom;
-    padding-left: $left;
-  }
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+////////////////////////////
+@mixin margin($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
 
-  @mixin margin($top, $right, $bottom, $left) {
-    margin-top: $top;
-    margin-right: $right;
-    margin-bottom: $bottom;
-    margin-left: $left;
-  }
+@mixin width-height($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
 
-  @mixin width-height($width, $height:$width) {
-    width: $width;
-    height: $height;
-  }
-
-
+//////////////////////////////////////////////////
 @mixin screen($size) {
   $breakpoint-big: "(min-width:1280)";
-  $breakpoint-med-small:"(min-width:768px) and (max-width:1279px)";
+  $breakpoint-med-small: "(min-width:768px) and (max-width:1279px)";
   $breakpoint-small: "(min-width:320px) and (max-width:767px)";
-
-
 
   @if $size == breakpoint-big {
     @media only screen and #{$breakpoint-big} {
       @content;
     }
-  }
-  @else if $size == breakpoint-med-small {
+  } @else if $size == breakpoint-med-small {
     @media only screen and #{$breakpoint-med-small} {
       @content;
     }
-
-  }
-  @else if $size == breakpoint-small {
+  } @else if $size == breakpoint-small {
     @media only screen and #{$breakpoint-small} {
       @content;
     }
-  }
-  @else {
+  } @else {
     @media only screen and #{$size} {
       @content;
     }
   }
 }
 
+///////////////////////////////////////////
+@mixin horizontalLine(
+  $textcolor,
+  $backgroundcolor,
+  $scolor,
+  $opacity,
+  $font-size
+) {
+  text-align: center;
+  font-size: $font-size;
+
+  font-weight: 900;
+  @include margin(89px, null, 33px, null);
+
+  position: relative;
+
+  z-index: 1;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 50vw;
+    height: 3px;
+    background-color: $scolor;
+    opacity: $opacity;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 50vw;
+    height: 3px;
+    background-color: $scolor;
+    opacity: $opacity;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: -1;
+  }
+
+  span {
+    position: relative;
+    background-color: $backgroundcolor;
+    font-size: $font-size;
+    color: $textcolor;
+    font-weight: 900;
+    @include margin(89px, null, null, null);
+    @include padding(8px, 60px, 8px, 60px);
+  }
+}
+
+///////////////////////////////////
+
+@mixin products($backgroundColor) {
+  background: $backgroundColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @content;
+}
+
+////////////////////////////////////
+
+@mixin containerProducts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  justify-items: center;
+  /* @include padding(0px, 59px, 59px, 59px);*/
+  width: 100%;
+  /*@include margin(null,null, null, null);*/
+  @include screen("breakpoint-med-small") {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include screen("breakpoint-small") {
+    display: flex;
+    /*flex-direction: row;*/
+    text-align: center;
+    /* height:100%;*/
+    grid-gap: 15px;
+    @include padding(0px, 80px, 59px, 80px);
+    @include margin(null, null, null, -20px);
+    /*@include padding(0px,auto,59px,auto);*/
+  }
+}
+
+@mixin small-container-popular {
+  position: relative;
+  height: 366px;
+  width: 271px;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  @include screen("breakpoint-small") {
+    @include margin(null, -12px, null, -12px);
+  }
+  img {
+    object-fit: cover;
+    width: 271px;
+    height: 261px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .text {
+    text-align: center;
+    p {
+      @include margin(20px, auto, 20px, auto);
+      color: $m-grey;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 400;
+    }
+
+    .price {
+      color: #011847;
+      font-size: 14px;
+      font-weight: 400;
+      @include margin(0px, 0px, 0px, 0px);
+    }
+  }
+}
+////////////////////////////////////////////BREADCRUMB
+@mixin breaCrumb {
+  @include padding(47px, 16px, 19px, 16px);
+  list-style: none;
+  li {
+    display: inline;
+    font-size: 14px;
+    font-weight: 400;
+
+    & + li:before {
+      @include padding(8px, 8px, 8px, 8px);
+      color: black;
+      content: "/\00a0";
+    }
+
+    a {
+      color: $base-green;
+      text-decoration: none;
+    }
+  }
+}
+
+///////////////////////////
+@mixin select-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 2px solid #e8e2d6;
+  border-radius: 20px;
+  @include padding(10px, 3px, 10px, 3px);
+  @include screen("breakpoint-small") {
+    @include margin(null, null, 32px, null);
+  }
+  button,
+  input {
+    border: none;
+    outline: none;
+    background: #fff;
+    text-align: center;
+    font-size: 14px;
+  }
+  input {
+    width: 50%;
+  }
+}

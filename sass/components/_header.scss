@@ -1,12 +1,22 @@
 nav{
+    @media print {
+        display: none;
+      }
+    position: sticky;
+    top:0;
+    z-index:100;
+    background: #fff;
+    
     .icons {
          align-items: center;
          justify-content: center;
          color: $grey;
          display: flex;
 
+        
 
          cursor: pointer;
+      
          .circle{
              position:relative;
            
@@ -42,6 +52,9 @@ nav{
              @include padding(null, 22px, null, 22px);
              font-size: 25px;
 
+             &:hover {
+                color: $base-green;
+            }
              @include screen("breakpoint-med-small") {
                  font-size:14px;
                  @include padding(null, 4px, null, 4px);
@@ -110,6 +123,7 @@ nav{
         border-radius: 10px;
         width: 180px;
         height:180px;
+        @include margin(null,30px,null,null);
      }
        
     }
@@ -195,6 +209,7 @@ nav{
         width: auto;
         justify-content: center;
         z-index: 99;
+       
     }
 
   
@@ -215,6 +230,8 @@ nav{
    /* height: 100vh;*/
     display: block;
     overflow-y: auto;
+    height:80%;
+    
      }
   
     .fa-caret-down{
@@ -316,7 +333,7 @@ li {
         opacity: 0;
         visibility: hidden;
         z-index: 99;
-
+        
        
         
 
@@ -328,6 +345,10 @@ li {
           max-height:0px;
           overflow: hidden;
          
+         
+         
+         
+         
         }
 
 
@@ -338,27 +359,33 @@ li {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
             width: 100%;
-
+            grid-gap:100px;
             @include screen("breakpoint-med-small") { 
                 @include padding(10px,10px,10px,10px);
+                grid-gap: 0px;
             }
 
             @include screen("breakpoint-small") {
                 display: flex;
                 flex-direction: column;
-                padding: 20px 20px 0 20px;
+                padding: 0 10px 0 10px;
+                @include padding(null,10px,null,10px);
+                grid-gap:10px;
+                
+               
           }
         }
 
           .row{
-            display: flex;
+            /*display: flex
             flex-direction: column;
-            align-items: flex-start;
+            align-items: flex-start;*/
 
             label {
                 @include screen("breakpoint-med-small") { 
                     font-size: pt-to-px(18);
                     line-height: pt-to-px(15);
+                   
                 }
 
                 @include screen("breakpoint-small") {
@@ -396,18 +423,24 @@ li {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         list-style: none; 
-        grid-gap:70px;
+        grid-gap:150px;
+        @include screen("breakpoint-med-small") { 
+            grid-gap: 10px;
+        }
 
         @include screen("breakpoint-small") {
             display:flex;
             flex-direction: column;
-            grid-gap: 0px;
+            grid-gap: 0;
         }
         
-     a{
+        .mini-links li a {
+            line-height: 31px;
+        }
+      a{
         color:white;
         font-size: 16px;
-        line-height: 31px;
+       
         display: block;
 
         &:hover {
@@ -417,10 +450,12 @@ li {
         @include screen("breakpoint-med-small") { 
             font-size: pt-to-px(12);
             line-height: pt-to-px(18);
+            
          }
+         
     }
+    
     }
-
 }
 
 .btn {
@@ -547,7 +582,8 @@ li {
 
     @include screen("breakpoint-small") {
         align-items: center;
-         justify-content: center;
+         justify-content: space-around;
+         
          color: $grey;
          display: flex;
          @include margin(auto,null,null,null);
@@ -557,8 +593,13 @@ li {
          bottom:0;
          right:0;
          left:0;
-}
+
+       
 i{
+    &:hover {
+        color: $base-green;
+    }
+}
     @include screen("breakpoint-small") {
         @include padding(null,22px,null,22px);
         font-size:30px; 
@@ -568,7 +609,7 @@ i{
 .fa-bars{
     @include screen("breakpoint-small") {
         position:absolute;
-        left:20px;
+        left:10px;
         top:30px;
        
     }
@@ -579,7 +620,7 @@ i{
 
     @include screen("breakpoint-small") {
         position:absolute;
-        left: 20px;
+        left: 10px;
         top:30px;
       
          }
@@ -603,10 +644,11 @@ i{
     list-style: none;
     /*font-size: pt-to-px(16);*/
     font-weight: 400;
+    
    /* line-height: pt-to-px(31);*/
-    @include screen("breakpoint-med-small") { 
+   /* @include screen("breakpoint-med-small") { 
         @include padding(null,null,null,50px);
-    }
+    }*/
 
    
      li {
@@ -638,13 +680,15 @@ i{
 
 
     .bag{
+        display: none;
+        @include screen("breakpoint-small") {
         width:25px;
         height:25px;
         margin:0;
         border-radius: 50%;
         position: absolute;
         top: -10px;
-        right:10%;
+       left:20px;
         color: $base-green;
         background: $base-darkblue;
         border: 2px solid $base-green;
@@ -652,7 +696,7 @@ i{
         align-items: center;
         justify-content: center;
         
-    
+        }
        
     }
 }

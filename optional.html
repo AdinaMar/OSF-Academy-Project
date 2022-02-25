@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OSF Academy</title>
+    <title>Document</title>
+
     <link rel="stylesheet" href="css/style.css">
     
-  <link
-  rel="stylesheet"
-  href="https://unpkg.com/swiper/swiper-bundle.min.css"
-/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-
+   
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
-
 <body>
-
     <nav>
 
 
@@ -255,216 +249,110 @@
 
 
     </div>
+    <div class="title-container">
+
+    <ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li>Shopping Cart</li>
+    </ul>
+    <h1><span>SHOPPING CART</span></h1>
+
+<div class="whole-section">
+    <div class="first-part">
+
+        <div class="first">
+            <img src="images/pdp-images/PG.10216885.JJ169XX.PZ-small.jpg" alt="cardigan">
+            <div class="title-price">
+                <p>Kristina Dam Oak Table With White Marble Top</p>
+                <p class="first-calc"> $2195.00 </p> 
+            </div>
+            
+                <div class="numbers">
+               <button id="decrementfirst"> - </button>
+               <input class="numbers-calc" type="text" id="numberfirst" value="1">
+
+                 <button id="incrementfirst"> + </button>
+                </div>
+                <strong id="calcSecond">$2,195</strong>
+                <i class="fas fa-times btn-danger"></i>
+        </div>
+
+        <div class="first">
+            <img src="images/pdp-images/PG.10216885.JJ169XX.BZ-small.jpg" alt="cardigan">
+            <div class="title-price">
+                <p>Kristina Dam Oak Table With White Marble Top</p>
+                <p class="first-calc"> $2195.00 </p> 
+            </div>
+            
+                <div class="numbers">
+               <button id="decrement"> - </button>
+               <input class="numbers-calc" type="text" id="number" value="2">
+
+                 <button id="increment"> + </button>
+                </div>
+                <strong id="calc">$2,195</strong>
+                <i class="fas fa-times btn-danger"></i>
+        </div>
 
 
-
-<!--                CARUSEL                                       -->
-
-<div class=" carusel-container">
-
-    <div class="swiper carousel">
-       <div class="swiper-wrapper">
-<div class="swiper-slide carousel-overlay">
-<img src="./images/header/carusel/slider1.png" alt="woman with shopping bags">
-<div class="text-carousel-overlay1">
-    <h1>Control and manage any device with cloud solutions</h1>
-    <p>Improve business performance and the user experience with the right mix of IoT technology and proceses</p>
-  <a href="category.html"> <button> VIEW MORE</button> </a>
-</div>
-
-
-
-</div>
-
-<div class="swiper-slide carousel-overlay">
-    <img src="./images/header/carusel/slider2.png" alt="woman with shopping bags">
-    <div class="text-carousel-overlay2">
-        <h1>Control and manage any device with cloud solutions</h1>
-        <p>Improve business performance and the user experience with the right mix of IoT technology and proceses</p>
-      <a href="category.html"> <button> VIEW MORE</button> </a>
     </div>
+<div class="second-part">
+    <div class="inputs">
+    <div class="first-inputs">
+        <input type="text" placeholder="Enter Coupon Code">
+        <button>APPLY</button>
+    </div>
+
+    <div class="second-inputs">
+        <button>UPDATE CART</button>
+        <button>PROCEED TO CHECKOUT</button>
+    </div>
+</div>
+<div class="radios">
+    <div class="radios-into">
+
+<p>CART SUBTOTAL:</p>
+<p id="cartPrice"></p>
+
+    </div>
+    <div class="radios-into">
+        <h3>SHIPPING AND HANDLING:</h3>
+<div class="radios-buttons">
+<div>
+    <input class="radio-button" type="radio" id="flat" name="flat" value="10.00" >
+    <label for="flat">Flat Rate: <span>$10.00</span></label>
+</div>
+<div>
+    <input class="radio-button" type="radio" id="free" name="flat" value="0">
+    <label for="free">Free Shipping</label>
+</div>
+<div>
+    <input class="radio-button" type="radio" id="international" name="flat" value="60" checked>
+    <label for="international">International: <span>$60.00</span></label>
+</div>
+
+<div>
+    <input class="radio-button" type="radio" id="local" name="flat" value="5" >
+    <label for="local">Local Delivery: <span>$5.00</span></label>
+</div>
+
+<div>
+    <input class="radio-button" type="radio" id="localPickup" name="flat" value="0" >
+    <label for="localPickup">Local Pickup:</label>
+</div>
+    </div>
+
+
+</div>
+    <div class="radios-into">
+        <h3>ORDER TOTAL: </h3>
+        <p id="total"></p>
+    </div>
+</div>
     
 
-    </div>
-    
-    <div class="swiper-slide carousel-overlay">
-        <img src="./images/header/carusel/slider3.png" alt="woman with shopping bags">
-        <div class="text-carousel-overlay3">
-            <h1>Control and manage any device with cloud solutions</h1>
-            <p>Improve business performance and the user experience with the right mix of IoT technology and proceses</p>
-          <a href="category.html"> <button> VIEW MORE</button> </a>
-        </div>
-        
-    </div>
-        </div>
-      
-        <div class="swiper-pagination"></div>
-   
-   
 
 </div>
-
-
-    <div class="palmier">
-
-        <div class="overlay">
-
-            <img src="./images/header/carusel/palmier.png" alt="palmier">
-            <div class="text-overlay">
-
-                <h2> 55% </h2>
-
-                <h3>SUMMER SALES</h3>
-
-            </div>
-
-
-
-
-        </div>
-
-        <div class="additional">
-            <h4>Follow us on Facebook</h4>
-            <p> Sed ut perspiciatis unde omnis iste natus error sit</p>
-            <a href="https://wwww.facebook.com/"> <button> <i class="fab fa-facebook-f"></i> <span>FOLLOW  </span></button></a>
-        </div>
- </div>
-</div>
-
-
-
-
-
-    <!--                              PRODUCTS                                 -->
-
-    <div class="products">
-        <h2><span>Popular Items</span></h2>
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper containerProducts">
-
-
-                <div class="swiper-slide small-container ">
-                    <img src="images/header/products/prod1.png" alt="display tablet">
-
-                    <div class="text">
-                        <p>Kristina Dam Oak Table With White Marble Top</p>
-                        <span class="price"> $ 799.55</span>
-                    </div>
-                    <div class="productIcons">
-                        <i class="fas fa-plus shop"></i>
-                        <i class="fas fa-heart count"></i>
-                    </div>
-                </div>
-
-                <div class="swiper-slide small-container ">
-                  <a href="pdp.html"><img src="images/header/products/prod2.png" alt="text and numbers"> </a> 
-                    <div class="text">
-                     <a href="pdp.html"><p>Hay - About A Lounge Chair AAL 93</p></a>   
-                        <button>
-                           <a href="pdp.html" id="price">$659.55</a>
-                            <strong id="buyCart">BUY NOW</strong>
-                        </button>
-                    </div>
-                </div>
-                <div class="swiper-slide small-container ">
-                    <img src="images/header/products/prod3.png" alt="keyboard">
-                    <div class="text">
-                        <p>Activate facial mask and and Charcoal soap</p>
-                        <span class="price"> $129.55</span>
-                    </div>
-                    <div class="productIcons">
-                        <i class="fas fa-plus shop"></i>
-                        <i class="fas fa-heart count"></i>
-                    </div>
-                </div>
-                <div class="swiper-slide small-container ">
-                    <img src="images/header/products/prod4.png" alt="watch">
-                    <div class="text">
-                        <p>Cocktail Table Walnut |YES</p>
-                        <span class="price"> $299.99</span>
-                    </div>
-                    <div class="productIcons">
-                        <i class="fas fa-plus shop"></i>
-                        <i class="fas fa-heart count"></i>
-                    </div>
-                </div>
-
-
-
-                <div class="swiper-slide small-container ">
-                    <img src="images/header/products/prod5.png" alt="music-play">
-
-                    <div class="text">
-                        <p>Hay - About A Lounge CHair AAL 93</p>
-                        <span class="price"> $659.99</span>
-
-                    </div>
-                    <div class="productIcons">
-                        <i class="fas fa-plus shop"></i>
-                        <i class="fas fa-heart count"></i>
-                    </div>
-                </div>
-
-
-                <div class="swiper-slide small-container ">
-                    <img src="images/header/products/prod6.png" alt="compass">
-                    <div class="text">
-                        <p>TORY DESK CALENDAR</p>
-                        <span class="price"> $410.99</span>
-                    </div>
-                    <div class="productIcons">
-                        <i class="fas fa-plus shop"></i>
-                        <i class="fas fa-heart count"></i>
-                    </div>
-                </div>
-
-                <div class="swiper-slide small-container ">
-                    <img src="images/header/products/prod7.png" alt="shampoo">
-                    <div class="text">
-                        <p>CH445 WING Chain On SUITE NY</p>
-                        <span class="price"> $310.99</span>
-                    </div>
-                    <div class="productIcons">
-                        <i class="fas fa-plus shop"></i>
-                        <i class="fas fa-heart count"></i>
-                    </div>
-                </div>
-
-
-                <div class="swiper-slide small-container ">
-                    <img src="images/header/products/prod8.png" alt="shampoo">
-                    <div class="text">
-                        <p>My dragons are misbehaving again.Unbelieveble!</p>
-                        <span> <i class="fas fa-comment-alt"></i> 5H AGO</span>
-                    </div>
-                </div>
-                
-            </div>
-
-            <div class="swiper-pagination"></div>
-        </div>
-
-
-         <button class="load"><p>Load More</p><i class="fas fa-redo"></i></button>
-
-         <div class="prodotto"></div>
-        
-    </div>
-
-
-
-
-<!-- BANNER 2-->
-<div class="banner2">
-<img src="images/header/banner.png" alt="man doing yoga">
-<div class="overlay2-text">
-
-<h1>Banner OSF Theme</h1>
-<h3>Sed ut perspiciatis unde omnis iste natus error sit volup- tatem accusantium</h3>
-</div>
-
-
-
 
 </div>
 
@@ -472,144 +360,7 @@
 
 
 
-<!--SWIPER 3 FEATURED ITEMS            -->
-<div class="featured">
 
-    <h1>Featured Products</h1>
-    <h3>Unde omnis iste natus error sit voluptatem</h3>
-
-    <h4><span> /// </span></h4>
-    <div class="swiper featured1">
-        <div class="swiper-wrapper">
-            <div class=" swiper-slide card-feature">
-                <img src="images/header/featured items/post-1.png" alt="tablet">
-                <h2>Kristina Dam Oak Table With White Marble</h2>
-                <p>Awesome</p>
-            </div>
-
-            <div class="swiper-slide card-feature">
-                <img src="images/header/featured items/post-2.png" alt="shop">
-                <h2>Kristina Dam Oak Table With White Marble</h2>
-                <p>Marketing</p>
-            </div>
-
-            <div class="swiper-slide card-feature">
-                <img src="images/header/featured items/post-3.png" alt="man with tablet">
-                <h2>Kristina Dam Oak Table With White Marble</h2>
-                <p>Awesome</p>
-            </div>
-
-            <div class="swiper-slide card-feature">
-                <img src="images/header/featured items/post-4.png" alt="saleforce 1 platform">
-                <h2>Kristina Dam Oak Table With White Marble</h2>
-                <p>Marketing</p>
-            </div>
-
-        
-    <!-- <div class="swiper featured1">  
-            <div class="swiper-wrapper">   -->
-    <div class="swiper-slide card-feature">
-        <img src="images/header/products/prod1.png" alt="tablet">
-        <h2>Kristina Dam Oak Table With White Marble</h2>
-        <p>Awesome</p>
-    </div>
-
-    <div class="swiper-slide card-feature">
-        <img src="images/header/products/prod2.png" alt="tablet">
-        <h2>Kristina Dam Oak Table With White Marble</h2>
-        <p>Marketing</p>
-    </div>
-
-    <div class="swiper-slide card-feature">
-        <img src="images/header/products/prod3.png" alt="tablet">
-        <h2>Kristina Dam Oak Table With White Marble</h2>
-        <p>Awesome</p>
-    </div>
-
-    <div class="swiper-slide card-feature">
-        <img src="images/header/products/prod4.png" alt="tablet">
-        <h2>Kristina Dam Oak Table With White Marble</h2>
-        <p>Marketing</p>
-    </div>
-    <!-- </div>  
-         </div>     -->
-        </div>
-        
-    </div>
-
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
-
-
-</div>
-
-
-
-
-
-    <!-----                          SMALL SECTION            ---->
-
-    <div class="small-section">
-        <div class="package">
-            <i class="fas fa-shipping-fast"></i>
-            <div class="text-small">
-            <h2>FOCUS</h2>
-            <p>Our unwawering focus on superios service delivery and building next generation competencies</p>
-        </div>
-    </div>
-        <div class="package">
-            <i class="fas fa-recycle"></i>
-            <div class="text-small">
-            <h2>METHOD</h2>
-            <p>A standardfized methodology designed to deliver measurable business results and predictable costs</p>
-        </div>
-</div>
-        <div class="package">
-            <i class="fas fa-clipboard"></i>
-            <div class="text-small">
-            <h2>KNOWLEDGE</h2>
-            <p>A highly skilled,proactive workforce that reliably improves each client's ROI while mitigating their business risk</p>
-        </div>
-    </div>
-
-</div>
-
-    <div class="login-form">
-
-        <form action="">
-            <h2>Sign in</h2>
-            <span>Email</span>
-
-            <input type="email" id="email" name="email" class="box" required>
-
-
-
-            <div class="passForgot">
-                <span>Password</span>
-                <p class="pass">Forgot password</p>
-            </div>
-            <div class="pass-icons">
-                <input type="password" class="box" name="password" id="myInput" required title="At least 6 characters length, 
-                contain 1 numeric, 1 uppercase letter, 1 special character"
-                    pattern="(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
-                <span class="icons-eye">
-                    <i id="hide1" class="fas fa-eye"></i>
-                    <i id="hide2" class="fas fa-eye-slash"></i> </span>
-            </div>
-            <input type="submit" value="LOGIN" class="submit-btn">
-
-
-            <p>I don't have an account</p>
-        </form>
-    </div>
-
-
-
-
-
-
-    <!-- Footer -->
     <footer>
 
         <div class="coll">
@@ -757,45 +508,8 @@
 
     </footer>
 
-<!----------------------- COOKIES ------------------------->
-
-<div class="wrapper-cookies">
-    <div class="first-cookie">
-    <header>This website uses cookies</header>
-
-    <p>OSF uses its own and third-party cookies for statistical purposes, to know your preferences, for website performance 
-        and interaction with social media offering publicity tailored to your interests. If you continue browsing, we consider that you accept its use. 
-        You can expand this information consulting our <span>Cookies Policy Page. </span></p>
-</div>
-<div clss="second-cookie">
-    <i class="fas fa-times" id="close"></i>
-    <button id="accept">ACCEPT</button>
-
-</div>
-</div>
-
-
-
-
-
-
-
-
-<script src="script/common.js"></script>
-    <script src="script/app.js"></script>
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="script/swiper.js"></script>
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="script/carouselSwipe.js"></script>
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="script/swiperFeatured.js"></script>
-
-    <script src="script/items.js"></script>
-
-    <script src="script/cookies.js"></script>
+    <script src="script/common.js"></script>
+ <script src="script/cart.js"></script>
+   
 </body>
-
 </html>

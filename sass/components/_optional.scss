@@ -1,0 +1,149 @@
+.title-container {
+
+@include products(#f1edea);
+
+.breadcrumb {
+    @include breaCrumb;
+}
+h1{
+    @include horizontalLine($m-grey,#f1edea, #e5e2df, 48px,1);
+}
+
+}
+
+.whole-section {
+    width: 90%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    .first-part{
+        display: flex;
+        flex-direction: column;
+        border-bottom:1px;
+
+        .first {
+            display: flex;
+            flex-direction: row;
+            @include margin(null,null,45px,null);
+            @include padding(50px,50px,50px,50px);
+            align-items: center;
+            
+         
+
+            img{
+                width:100px;
+                height:100px;
+                @include margin(null,40px,null,null);
+
+            }
+            p{
+                font-size: 16px;
+                color: $m-grey;
+                line-height: 18px;
+
+                &:nth-child(2) {
+                    color: $grey;
+                    font-size: 14px;
+                    @include margin(15px,null,null,null);
+
+                }
+            }
+            .numbers {
+                @include select-numbers;
+               @include margin(null,150px,null,300px);
+            }
+       
+       strong {
+           color: $m-grey;
+           font-weight:700;
+           font-size:25px;
+           @include margin(null,100px,null,null);
+       }
+       
+        }
+    }
+
+    .second-part {
+        border-top: 5px solid #f1edea;
+        @include padding(50px,50px,50px,50px);
+        display: flex;
+        flex-direction: column;
+
+        .inputs{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            @include margin(null,80px,null,null);
+.first-inputs{
+            input {
+                border-radius: 20px;
+                border: 2px solid #f1edea;
+                @include padding(10px,30px,10px,30px);
+                color: $m-grey;
+
+            }
+            button {
+                background: white;
+                color: $base-green;
+                border-radius: 20px;
+                border:2px solid $base-green;
+                cursor: pointer;
+                @include padding(10px,30px,10px,30px);
+                @include margin(null,null,null,30px);
+            }
+        }
+        .second-inputs {
+            button {
+                background: white;
+                color: $base-green;
+                border-radius: 20px;
+                border:2px solid $base-green;
+                cursor: pointer;
+                @include padding(10px,30px,10px,30px);
+                @include margin(null,null,null,30px);
+                &:nth-child(2){
+                    background: $base-green;
+                    color: white;
+                    border-radius: 20px;
+                    border:2px solid $base-green;
+                    cursor: pointer;
+                    @include padding(10px,30px,10px,30px);
+                    @include margin(null,null,null,20px);
+                }
+            }
+        }
+        }
+
+        .radios {
+            display: flex;
+            align-self: flex-end;
+            flex-direction: column;
+
+        .radios-into{
+            display: flex;
+            flex-direction: row;
+            @include margin(null,80px,null,null);
+
+            .radios-buttons{
+                @include margin(10px,null,null,null);
+                input{
+                @include margin(10px,null,10px,null);
+            }
+        }
+p{
+    @include margin(60px,100px,null,null);
+    color: $grey;
+    font-size: 16px;
+}
+   h3 {
+            font-size: 16px;
+            font-weight: 700;
+            @include margin(20px,100px,null,null);
+    
+}
+        }
+
+        }}
+    }
+
+

@@ -1,38 +1,27 @@
 .products {
-  background: $base-darkblue;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  
+  @include products($base-darkblue);
 
-  /*@include padding(null,59px,null,59px);*/
-
-  .containerProducts, .prodotto{
-    display: grid;
+  .prodotto {
+    &.active {
+      display: grid;
+    }
+    display: none;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 25px;
+    grid-gap: 20px;
     justify-items: center;
-    @include padding(0px, 59px, 59px, 59px);
-    width: 100%;
-    @include margin(null, null, null, -50px);
+    @include padding(45px, 59px, 59px, 59px);
+    width: 98%;
+
+    /*@include margin(null, 59px, null, 75px);*/
     @include screen("breakpoint-med-small") {
       grid-template-columns: 1fr 1fr;
     }
 
     @include screen("breakpoint-small") {
-      display: flex;
-      /*flex-direction: row;*/
-      text-align: center;
-      /* height:100%;*/
-      grid-gap: 15px;
-      @include padding(0px, 80px, 59px, 80px);
-      @include margin(null, null, null, -20px);
-      /*@include padding(0px,auto,59px,auto);*/
+      display: none;
     }
 
-    /* @include padding(null,70px,null,59px);*/
-
-    .small-container,
     article {
       position: relative;
       height: 366px;
@@ -42,11 +31,45 @@
       display: flex;
       flex-direction: column;
       @include screen("breakpoint-small") {
-        @include margin(null, -12px, null, -12px);
+        display: none;
       }
+      img {
+        object-fit: cover;
+        width: 271px;
+        height: 261px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+      }
+      .text {
+        text-align: center;
+        p {
+          /* justify-self: center;
+                align-self: center;*/
 
-      /*@include padding(null,70px,null,59px);
-            @include margin(null,30px,null,30px);*/
+          @include margin(20px, auto, 20px, auto);
+          color: $m-grey;
+          font-size: 16px;
+          line-height: 18px;
+          font-weight: 400;
+        }
+
+        .price {
+          color: #011847;
+          font-size: 14px;
+          font-weight: 400;
+          @include margin(0px, 0px, 0px, 0px);
+        }
+      }
+    }
+  }
+  /*@include padding(null,59px,null,59px);*/
+
+  .containerProducts {
+    @include containerProducts;
+
+    .small-container {
+      @include small-container-popular;
+
       &:hover {
         .productIcons {
           opacity: 0.9;
@@ -66,9 +89,9 @@
           border-radius: 10px;
         }
         img {
-         width:100%;
-         height:100%;
-          
+          width: 100%;
+          height: 100%;
+
           object-fit: cover;
           border-radius: 10px;
           background-color: $base-darkblue;
@@ -100,224 +123,107 @@
         }
       }
     }
-      .productIcons {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-image: linear-gradient(0deg, #1bc167 0%, #2dd3a1 100%);
-        opacity: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        border-radius: 10px;
+    .productIcons {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(0deg, #1bc167 0%, #2dd3a1 100%);
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      border-radius: 10px;
 
-        .fa-plus {
-          background-color: #fff;
-          color: #23c46e;
-          font-size: 50px;
-          @include padding(20px, 20px, 20px, 20px);
-          border-radius: 50%;
-        }
-        .fa-heart {
-          background-color: #fff;
-          color: #e73c68;
-          font-size: 50px;
-          @include padding(20px, 20px, 20px, 20px);
-          border-radius: 50%;
-          cursor: pointer;
-        }
-      }
-
-      img {
-        object-fit: cover;
-        width: 271px;
-        height: 261px;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-      }
-      .text {
-        text-align: center;
-        p {
-          /* justify-self: center;
-                align-self: center;*/
-
-          @include margin(20px, auto, 20px, auto);
-          color: $m-grey;
-          font-size: 16px;
-          line-height: 18px;
-          font-weight: 400;
-        }
-
-        .price {
-          color: #011847;
-          font-size: 14px;
-          font-weight: 400;
-          @include margin(0px, 0px, 0px, 0px);
-        }
-      }
-      button {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        @include margin(10px, auto, 10px, auto);
-        border-radius: 20px;
-        /* @include padding(11px,21px,11px,21px);*/
-        outline: none;
-        border: 2px solid $grey;
+      .fa-plus {
         background-color: #fff;
-
-        #price {
-          color: #84bc22;
-          @include padding(11px, 21px, 11px, 21px);
-          @include margin(0px, 0px, 0px, 0px);
-        }
-
-        a {
-          border-left: 2px solid $grey;
-          align-self: center;
-          font-size: 14px;
-          font-weight: 400;
-          color: black;
-          @include padding(13px, 23px, 13px, 23px);
-        }
+        color: #23c46e;
+        font-size: 50px;
+        @include padding(20px, 20px, 20px, 20px);
+        border-radius: 50%;
+      }
+      .fa-heart {
+        background-color: #fff;
+        color: #e73c68;
+        font-size: 50px;
+        @include padding(20px, 20px, 20px, 20px);
+        border-radius: 50%;
+        cursor: pointer;
       }
     }
-    h2 {
-      text-align: center;
-      font-size: 24px;
-      color: white;
-      font-weight: 900;
-      @include margin(89px, null, 33px, null);
 
-      /* @include padding(8px,50px,px,50px);*/
-      position: relative;
-      background: $base-darkblue;
+    button {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      @include margin(10px, auto, 10px, auto);
+      border-radius: 20px;
+      /*@include padding(10px,21px,1px,21px);*/
+      outline: none;
+      border: 2px solid $grey;
+      background-color: #fff;
 
-      &::before {
-        content: "";
-        display: block;
-        width: 800px;
-        height: 3px;
-        background-color: #fff;
-        opacity: 0.1;
-        position: absolute;
-        left: 0;
-        top: 50%;
+      a {
+        color: #84bc22;
+        @include padding(11px, 21px, 11px, 21px);
+        /* @include margin(0px, 0px, 0px, 0px);*/
       }
 
-      &::after {
-        content: "";
-        display: block;
-        width: 800px;
-        height: 3px;
-        background-color: #fff;
-        opacity: 0.1;
-        position: absolute;
-        right: 0;
-        top: 50%;
-      }
-
-      span {
-        position: relative;
-        background: $base-darkblue;
-        font-size: 24px;
-        color: white;
-        font-weight: 900;
-        @include margin(89px, null, null, null);
-        @include padding(8px, 60px, 8px, 60px);
+      #buyCart {
+        border-left: 2px solid $grey;
+        align-self: center;
+        font-size: 12px;
+        font-weight: 400;
+        color: black;
+        @include padding(0px, 15px, 0px, 21px);
+        cursor: pointer;
       }
     }
-  
+  }
+  h2 {
+    @include horizontalLine(#fff, $base-darkblue, #fff, 0.1, 24px);
+  }
 
-  /* h2 {
+  .load {
+    @include margin(51px, null, 60px, null);
     display: flex;
+    align-items: center;
     flex-direction: row;
-     text-align: center;
-     font-size:24px;
-     color:white;
-     font-weight:700;
-     @include margin(89px, null,null,null);
-     @include padding(null,null,41px,null);
-     
-     h2:before, h2:after{
-        content: "";
-        flex: 1 1;
-        border-bottom: 1px solid;
-        margin: auto;
-      }
-      h2:before {
-        margin-right: 10px
-      }
-      h2:after {
-        margin-left: 10px
-      }
- }*/
-  /*.title:after,
-  .title:before{
-    content:"\00a0\00a0\00a0\00a0\00a0";
-    text-decoration:line-through;
-    width: 100%;
-    color: white;
-    
- }*/
+    border: 2px solid $base-white;
+    border-radius: 25px;
+    background-color: #1e1d22;
+    @include padding(13px, 69px, 13px, 69px);
 
-.load{
-@include margin(51px,null,60px,null);
-display: flex;
-align-items: center;
-flex-direction: row;
-border: 2px solid $base-white;
-border-radius: 25px;
-background-color: #1e1d22;
-@include padding(13px,69px,13px,69px);
+    p {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    i {
+      color: #ffffff;
+      @include padding(null, 24px, null, 24px);
 
-p{
-  
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-i{
-  color:#ffffff;
- @include padding(null,24px,null,24px);
-  
-  font-size: 20px;
-}
-}
-
-
-.load {
-  @include screen("breakpoint-small") {
-    display: none;
-}
-}
-
-
-.prodotto{
-  display: none;
-
-  &.active {
-    display:grid;
-  }
-  @include screen("breakpoint-small") {
-    display: none;
-}
-}
-
+      font-size: 20px;
+    }
   }
 
-.swiper {
+  .load {
+    @include screen("breakpoint-small") {
+      display: none;
+    }
+  }
+}
 
+.mySwiper {
   margin-left: null;
   margin-right: null;
-  width:100%;
+  width: 100%;
   @include screen("breakpoint-small") {
-   /* width: 100%;*/
+    /* width: 100%;*/
     height: 100%;
   }
 
@@ -343,7 +249,7 @@ i{
         align-items: center;*/
     }
   }
-}
+
 .swiper-slide img {
   @include screen("breakpoint-small") {
     display: block;
@@ -354,6 +260,7 @@ i{
 }
 
 .swiper-pagination-bullet {
-  background: var(--swiper-pagination-bullet-inactive-color, #fff);
+  background: var(--swiper-pagination-bullet-inactive-color, 	#C8C8C8);
+  
 }
-
+}

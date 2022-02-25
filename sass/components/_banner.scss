@@ -13,7 +13,8 @@
     display: flex;
     flex-direction: column;
     @include screen("breakpoint-small") {
-        display: none;
+       display: none;
+       
     }
         img{
             @include screen("breakpoint-med-small") {
@@ -43,10 +44,10 @@
           font-weight: 700;
           font-size: 100px;
           color: #fff;
-          @include padding(40px, auto, 30px, auto);
+          @include padding(40px, 0px, 30px, 0px);
 
           @include screen("breakpoint-med-small") {
-            @include padding(30px, auto, 30px, auto);
+            @include padding(30px, 0px, 30px, 0px);
             font-size:55px;
           }
         }
@@ -138,7 +139,7 @@
         }
     
     }
-    @include padding(auto,30px,auto,auto);
+    @include padding(0px,30px,0px,0px);
     position: relative;
     @include screen("breakpoint-small") {
        justify-self: center;
@@ -259,7 +260,7 @@ img {
             width:260px;
             height:88px;
             font-size:28px;
-            @include margin(31px,14px,31,14px);
+            @include margin(31px,14px,31px,14px);
     }
     @include screen("breakpoint-med-small") {
         font-size:28px;

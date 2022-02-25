@@ -145,3 +145,36 @@ tabs.forEach((tab) => {
         document.documentElement.scrollTop = 0;
     }
     scroll.addEventListener("click", topScroll);
+
+    ///////////////////////////ZOOM IMG
+    
+    const buttonClick = document.querySelector("#focusClick")
+    const focusPic = document.querySelector("#picToZoom");
+ 
+
+
+function openFullscreen() {
+  if (focusPic.requestFullscreen) {
+    focusPic.requestFullscreen();
+  } else if (focusPic.webkitRequestFullscreen) { 
+    focusPic.webkitRequestFullscreen();
+  } else if (focusPic.msRequestFullscreen) {
+    focusPic.msRequestFullscreen();
+  }
+}
+
+buttonClick.addEventListener('click', openFullscreen);
+
+    /////////////////////////////////
+    const printing = document.querySelector("#printButton");
+
+    const printer = () => {
+
+     window.print();
+    }
+
+    printing.addEventListener("click", printer );
+
+
+    /////////////////////////////////////
+  

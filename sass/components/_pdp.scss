@@ -1,31 +1,11 @@
 .pdp {
-  background-color: #f1edea;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  @include products(#f1edea) {
+    width: 100%;
+  
+  }
 
   ul.breadcrumb {
-    @include padding(47px, 16px, 19px, 16px);
-    list-style: none;
-    li {
-      display: inline;
-      font-size: 14px;
-      font-weight: 400;
-
-      & + li:before {
-        @include padding(8px, 8px, 8px, 8px);
-        color: black;
-        content: "/\00a0";
-      }
-
-      a {
-        color: $base-green;
-        text-decoration: none;
-      }
-    }
- 
+    @include breaCrumb;
   }
   .whole-container {
     width: 90%;
@@ -34,7 +14,7 @@
     @include margin(26px, 55px, 26px, 55px);
     background-color: #ffffff;
     align-items: center;
-      justify-content: center;
+    justify-content: center;
 
     .prod-container {
       display: flex;
@@ -45,75 +25,72 @@
       /*background-color: #ffffff;
       @include margin(26px, 55px, 26px, 55px);*/
       @include screen("breakpoint-med-small") {
-          flex-direction: column;
-        
-
+        flex-direction: column;
       }
       @include screen("breakpoint-small") {
         flex-direction: column;
-        
       }
 
       .big-section {
         display: flex;
         flex-direction: row;
         align-self: flex-start;
-       @include screen("breakpoint-small") {
-        
-         flex-direction: column;
-         align-items: center;
-         justify-content: center;
-         @include margin(null,auto,null,auto);
-       }
-     
-      .picture {
-        @include margin(16px, 16px, 16px, 16px);
-        align-self: flex-start;
-
-        @include screen("breakpoint-med-small") {
-            align-self: center;
+        @include screen("breakpoint-small") {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          @include margin(null, auto, null, auto);
         }
-      }
-      .pictures {
-        display: flex;
-        flex-direction: column;
-        @include margin(27px, 33px, 239px, 33px);
-        grid-gap: 24px;
-        width:73px;
-        height:70px;
-        cursor: pointer;
-        @include screen("breakpoint-med-small") {
+
+        .picture { 
+
+          position: relative;
+          
+          @include margin(16px, 16px, 16px, 16px);
+          align-self: flex-start;
+
+          @include screen("breakpoint-med-small") {
+            align-self: center;
+          }
+          i{
+            position: absolute;
+            top:20px;
+            left:20px;
+            color: $base-green;
+            cursor: pointer;
+          }
+          &.zoom{
+            -webkit-transform : scale(1.5);
+            transform: scale(1.5);
+          }
+         
+        }
+        .pictures {
+          display: flex;
+          flex-direction: column;
+          @include margin(27px, 33px, 239px, 33px);
+          grid-gap: 24px;
+          width: 73px;
+          height: 70px;
+          cursor: pointer;
+          @include screen("breakpoint-med-small") {
             flex-direction: column;
             @include margin(27px, 33px, 59px, 33px);
+          }
+          @include screen("breakpoint-small") {
+            flex-direction: row;
+            @include margin(null, null, null, null);
+
+            grid-gap: 18px;
+            @include margin(27px, 13px, 45px, 13px);
+          }
         }
-        @include screen("breakpoint-small") {
-          flex-direction: row;
-          @include margin(null,null,null,null);
-        
-        
-         
-          grid-gap:18px;
-          @include margin(27px, 13px, 45px, 13px);
-          
       }
-    
- }
-
-
-
-
-
-
-
-
-
-  }
       .infos {
         align-self: flex-start;
         @include margin(46px, 54px, 104px, 16px);
         @include screen("breakpoint-med-small") {
-            align-self: center;
-           
+          align-self: center;
         }
         h2 {
           color: $m-grey;
@@ -122,8 +99,7 @@
           @include margin(null, null, 42px, null);
           @include screen("breakpoint-med-small") {
             align-self: center;
-           
-        }
+          }
         }
         .wrapping {
           width: 50%;
@@ -184,7 +160,8 @@
               transform: rotate(-45deg);
             }
             li {
-              padding: 10px 20px;
+              
+              @include padding(10px,20px,10px,20px);
             }
           }
           .select {
@@ -198,7 +175,8 @@
             display: none;
 
             li {
-              padding: 10px 20px;
+              
+              @include padding(10px,20px,10px,20px);
               cursor: pointer;
               border: 2px solid #e8e2d6;
               border-radius: 20px;
@@ -209,271 +187,152 @@
         .selects {
           display: flex;
           flex-direction: row;
-         justify-content: space-between;
+          justify-content: space-between;
           align-items: center;
-          @include margin(null,null,52px,null);
+          @include margin(null, null, 52px, null);
           @include screen("breakpoint-small") {
             flex-direction: column;
-         
-          align-items: flex-start;
+
+            align-items: flex-start;
           }
-          .numbers{
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              background: #ffffff;
-              border:2px solid #e8e2d6;
-              border-radius: 20px;
-              @include padding(10px,3px,10px,3px);
-              @include screen("breakpoint-small") {
-                @include margin(null,null,32px,null);
-              }
-         button, input {
-             border:none;
-             outline: none;
-             background: #fff;
-             text-align: center;
-             font-size: 14px;
-            
-         }
-         input{
-             width:50%;
-         }
+          .numbers {
+            @include select-numbers;
+     
+          }
+
+          .cart {
+            @include padding(12px, 28px, 12px, 28px);
+            color: white;
+            background: $base-green;
+            cursor: pointer;
+            border-radius: 20px;
+            border: 2px solid #e8e2d6;
+            @include margin(null, 154px, null, null);
+          }
         }
 
-         .cart {
-@include padding(12px,28px,12px,28px);
-color:white;
-background: $base-green;
-cursor: pointer;
-border-radius: 20px;
-border:2px solid #e8e2d6;
-@include margin(null,154px,null,null);
-         }
+        .reads {
+          display: flex;
+          flex-direction: column;
 
+          justify-content: center;
+          @include margin(null, null, 33px, null);
 
-        }
-      
-    
-    .reads{
-        display: flex;
-        flex-direction: column;
-        
-        justify-content: center;
-        @include margin(null,null,33px,null);
-
-        p{
+          p {
             font-size: 16px;
-            line-height:24px;
+            line-height: 24px;
             color: $m-grey;
             font-weight: 400;
             &:nth-child(2) {
-                font-size: 14px;
-                color: $base-green;
-                @include padding(17px,null,null,null);
-                cursor: pointer;
+              font-size: 14px;
+              color: $base-green;
+              @include padding(17px, null, null, null);
+              cursor: pointer;
             }
+          }
         }
-      
+
+        .social-links {
+          display: flex;
+          flex-direction: row;
+          opacity: 0.7;
+
+          p {
+            @include margin(null, 35px, null, null);
+            color: $m-grey;
+            font-size: 14px;
+            line-height: 26px;
+          }
+          i {
+            color: $m-grey;
+            opacity: 0.7;
+            @include margin(null, 24px, null, null);
+          }
+        }
+      }
     }
 
-.social-links {
-    display: flex;
-    flex-direction: row;
-    opacity:0.7;
-
-    p{
-        @include margin(null,35px,null,null);
-        color:$m-grey;
-        font-size: 14px;
-        line-height: 26px;
-    }
-    i{
-        color:$m-grey;
-        opacity:0.7;
-        @include margin(null,24px,null,null);
-    }
-}
-
-
-}
-}
-  
-.tabs {
-  @include screen("breakpoint-small") {
-    display: none;
-  }
-    .single-tabs{
+    .tabs {
+      @media print {
+        display: none;
+      }
+      @include screen("breakpoint-small") {
+        display: none;
+      }
+      .single-tabs {
         display: flex;
         align-items: center;
         justify-content: center;
         button {
-        overflow: hidden;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        color:$grey;
-        background: white;
-        font-size: 24px;
-        font-weight: 700;
-        @include padding(20px,20px,20px,20px);
-        cursor: pointer;
-      
-        &.active{
-        color: white;
-        background: $base-darkblue;   
-       }
+          overflow: hidden;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          color: $grey;
+          background: white;
+          font-size: 24px;
+          font-weight: 700;
+          @include padding(20px, 20px, 20px, 20px);
+          cursor: pointer;
+
+          &.active {
+            color: white;
+            background: $base-darkblue;
+          }
         }
-        
- }
- .tab-content{
-    color:white;
-    background: $base-darkblue; 
-    display: none;
-    grid-template-columns: 1fr 1fr;
-    @include padding(70px,69px,70px,69px);
-    grid-gap: 20px;
-    font-size: 16px;
-&.active {
-    display: grid;
-} 
-}
-
-       }
- 
+      }
+      .tab-content {
+        color: white;
+        background: $base-darkblue;
+        display: none;
+        grid-template-columns: 1fr 1fr;
+        @include padding(70px, 69px, 70px, 69px);
+        grid-gap: 20px;
+        font-size: 16px;
+        &.active {
+          display: grid;
+        }
+      }
     }
-
+  }
 
   h1 {
-    text-align: center;
-
-    color: $m-grey;
-    font-weight: 400;
-
-    /* @include padding(8px,50px,px,50px);*/
-    position: relative;
-    background: #f1edea;
-    z-index: 1;
-
-    &::before {
-      content: "";
-
-      width: 50vw;
-      height: 3px;
-      background-color: #e5e2df;
-      opacity: 1;
-      position: absolute;
-      left: 0;
-      top: 50%;
-      z-index: -1;
-    
-  
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 50vw;
-      height: 3px;
-      background-color: #e5e2df;
-      opacity: 1;
-      right: 0;
-      top: 50%;
-      z-index: -1; 
-    
-    
-     
-    }
-
-    span {
-      position: relative;
-      background: #f1edea;
-      font-size: 48px;
-      color: $m-grey;
-      font-weight: 400;
-      @include margin(89px, null, null, null);
-      @include screen("breakpoint-med-small") {
-          font-size: 28px;
-      }
-      @include screen("breakpoint-small") {
-        font-size:25px;
-      }
-    
-    }
+    @include horizontalLine($m-grey, #f1edea, #e5e2df, 1, 48px);
   }
 }
 
-.products {
-  background-color: #f1edea;
+.products-popular {
+  @media print {
+    display: none;
+  }
+  /* background-color: #f1edea;*/
+  @include products(#f1edea) {
+    @include padding(null, null, 59px, null);
+  }
 
   h2 {
-    text-align: center;
-    font-size: 24px;
-    color: $m-grey;
-    font-weight: 900;
-    @include margin(89px, null, 33px, null);
+    @include horizontalLine($m-grey, #f1edea, #e5e2df, 1, 24px);
+  }
+  .containerProducts-popular {
+    @include containerProducts;
 
-    /* @include padding(8px,50px,px,50px);*/
-    position: relative;
-    background: #f1edea;
-    z-index: 1;
-
-    &::before {
-      content: "";
-      display: block;
-      width: 55vw;
-      height: 3px;
-      background-color: #e5e2df;
-      opacity: 1;
-      position: absolute;
-      left: 0;
-      top: 50%;
-      z-index: -1;
-   
-    
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      width: 55vw;
-      height: 3px;
-      background-color: #e5e2df;
-      opacity: 1;
-      position: absolute;
-      right: 0;
-      top: 50%;
-      z-index: -1;
-   
-    }
-
-    span {
-      position: relative;
-      background: #f1edea;
-      font-size: 24px;
-      color: $m-grey;
-      font-weight: 900;
-      @include margin(89px, null, null, null);
-      @include padding(8px, 60px, 8px, 60px);
-
-      @include screen("breakpoint-med-small") {
-          font-size: 18px;
-      }
+    .small-container-popular {
+      @include small-container-popular;
     }
   }
 }
 
 .swiper-pagination {
-  display:none;
+  display: none;
   @include screen("breakpoint-small") {
     display: block;
   }
 }
-#scroll{
+#scroll {
   background: $base-green;
   color: white;
   border-radius: 20px;
-  @include padding(13px,27px,13px,27px);
-  @include margin(57px,null,57px,null);
+  @include padding(13px, 27px, 13px, 27px);
+  @include margin(57px, null, 57px, null);
   border: 2px solid $grey;
   cursor: pointer;
   font-size: 14px;
@@ -481,4 +340,17 @@ border:2px solid #e8e2d6;
   @include screen("breakpoint-small") {
     display: block;
   }
+}
+
+#printButton {
+  background-color: $base-green;
+  border: 2px solid #d9d9d9;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  @include padding(10px, 15px, 10px, 15px);
+  @include margin(null, null, 10px, null);
+  cursor: pointer;
+
 }

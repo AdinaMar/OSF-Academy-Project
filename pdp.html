@@ -23,7 +23,7 @@
         <div class="wrapper">
 
             <div class="logo">
-                <a href="#" target="_self">
+                <a href="index.html" target="_self">
                     <img src="images/header/Logo.png" alt="logo OSF">
                 </a>
 
@@ -266,8 +266,9 @@
 
         <div class="prod-container">
             <div class="big-section">
-            <div class="picture">
-                <img src="images/pdp-images/PG.10216885.JJ169XX.PZ.jpg" alt="girl trying on cardigan">
+            <div class="picture" >
+                <i class="fas fa-search-plus" id="focusClick"></i> 
+                <img src="images/pdp-images/PG.10216885.JJ169XX.PZ.jpg" id="picToZoom" alt="girl trying on cardigan">
 
             </div>
             
@@ -340,6 +341,7 @@
                      </p>
                     <p id="read">Read more</p>
                 </div>
+                <button id="printButton">Print</button>
                 <div class="social-links">
                     <p>Share</p>
                     <div>
@@ -406,13 +408,13 @@
 
 
 
- <div class="products ">
+ <div class="products-popular ">
         <h2><span>POPULAR ITEMS</span></h2>
         <div class="swiper mySwiper">
-            <div class="swiper-wrapper containerProducts">
+            <div class="swiper-wrapper containerProducts-popular">
     
     
-                <div class="swiper-slide small-container ">
+                <div class="swiper-slide small-container-popular ">
                     <img src="images/header/products/prod1.png" alt="display tablet">
     
                     <div class="text">
@@ -423,7 +425,7 @@
                 </div>
     
              
-                <div class="swiper-slide small-container ">
+                <div class="swiper-slide small-container-popular">
                     <img src="images/header/products/prod5.png" alt="music-play">
 
                     <div class="text">
@@ -439,7 +441,7 @@
 
 
 
-                <div class="swiper-slide small-container ">
+                <div class="swiper-slide small-container-popular">
                     <img src="images/header/products/prod3.png" alt="keyboard">
                     <div class="text">
                         <p>Activate facial mask and and Charcoal soap</p>
@@ -447,7 +449,7 @@
                     </div>
                    
                 </div>
-                <div class="swiper-slide small-container ">
+                <div class="swiper-slide small-container-popular">
                     <img src="images/header/products/prod4.png" alt="watch">
                     <div class="text">
                         <p>Cocktail Table Walnut |YES</p>
@@ -457,6 +459,7 @@
                 </div>
     
             </div>
+            <div class="swiper-pagination"></div>
         </div>
         <button id="scroll">SCROLL TO TOP</button>
         </div>

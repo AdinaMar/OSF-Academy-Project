@@ -1,194 +1,122 @@
-.error-page{
-    background-color: #f1edea;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+.error-page {
+  @include products(#f1edea);
 
+  ul.breadcrumb {
+    @include breaCrumb;
+  }
 
-
-
-ul.breadcrumb{
-    @include padding(47px,16px,19px,16px);
-    list-style:none;
-    li {
-        display:inline;
-        font-size: 14px;
-        font-weight: 400;
-    
-    &+li:before{
-        @include padding(8px,8px,8px,8px);
-        color:black;
-        content:"/\00a0";
-    }
-
-a{
-    color: $base-green;
-    text-decoration: none;
-}
-}
-}
-
-h1{
-text-align: center;
-font-size: 48px;
-color: $m_grey;
-font-weight: 700;
-@include margin(26px, null, null, null);
-position: relative;
-z-index: 1;
-
-&::before {
-  content: "";
-  display: block;
-  width: 800px;
-  height: 2px;
-  background-color: #e5e2df;;
-  
-  position: absolute;
-  left: 0;
-  top: 50%;
-  z-index:-1;
-}
-
-&::after {
-  content: "";
-  display: block;
-  width: 800px;
-  height: 2px;
-  background-color: #e5e2df;;
-  
-  position: absolute;
-  right: 0;
-  top: 50%;
-  z-index: -1;
-}
-
-span {
-  
-background-color: #f1edea;
-
-  
-  @include padding(null, 33px, null, 33px);
-}
-}
-.big-section{
+  h1 {
+    @include horizontalLine($m_grey, #f1edea, #e5e2df, 1, 48px);
+  }
+  .big-section {
     border-radius: 8px;
     background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: center;
-  
-    @include margin(41px,55px,41px,55px);
+
+    @include margin(41px, 55px, 41px, 55px);
     @include screen("breakpoint-small") {
-        @include padding(0px,0px,0px,0px);
-        
-    @include margin(24px,35px,21px,35px);
+      @include padding(0px, 0px, 0px, 0px);
+
+      @include margin(24px, 35px, 21px, 35px);
     }
 
     .ops {
-        position: relative;
-        @include padding(null,103px,null,null);
-        @include screen("breakpoint-med-small") { 
-            position: static;
-        }
-
-        @include screen("breakpoint-med-small") { 
-            @include padding(null,13px,null,null);
-        }
-
-        @include screen("breakpoint-small") {
-            @include padding(0px,0px,0px,0px);
-       position: relative;
-         left:30%;
-        }
-      
-
-        i{
-            font-size:300px;
-            color: #f1edea;
-            opacity: 0.3;
-            @include padding(63px,null,null,63px);
-            @include screen("breakpoint-small") {
-                display: none;
-                
-        }
-        @include screen("breakpoint-med-small") { 
-            display: none;
-        }
-    }
-   .ops-over{
-       display: flex;
-       align-items: center;
-       position: absolute;
-       top:0;
-       bottom:0;
-       right:0;
-       left:105px;
-       height:100%;
-       width:100%;
-       @include screen("breakpoint-med-small") { 
+      position: relative;
+      @include padding(null, 103px, null, null);
+      @include screen("breakpoint-med-small") {
         position: static;
+      }
+
+      @include screen("breakpoint-med-small") {
+        @include padding(null, 13px, null, null);
+      }
+
+      @include screen("breakpoint-small") {
+        @include padding(0px, 0px, 0px, 0px);
+        position: relative;
+        left: 30%;
+      }
+
+      i {
+        font-size: 300px;
+        color: #f1edea;
+        opacity: 0.3;
+        @include padding(63px, null, null, 63px);
+        @include screen("breakpoint-small") {
+          display: none;
+        }
+        @include screen("breakpoint-med-small") {
+          display: none;
+        }
+      }
+      .ops-over {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 105px;
+        height: 100%;
+        width: 100%;
+        @include screen("breakpoint-med-small") {
+          position: static;
+        }
+        @include screen("breakpoint-small") {
+          align-items: flex-start;
+          left: 0;
+          position: absolute;
+        }
+
+        h2 {
+          color: $base-green;
+          font-size: 113px;
+          line-height: 60px;
+          font-weight: 700;
+          @include screen("breakpoint-small") {
+            font-size: 60px;
+          }
+        }
+      }
     }
-       @include screen("breakpoint-small") {
-           align-items: flex-start;
-           left:0;
-           position: absolute;
-               }
-     
-   
-   h2{
-color:$base-green;
-font-size:113px;
-line-height: 60px;
-font-weight: 700;
-@include screen("breakpoint-small") {
-    font-size: 60px;
 
- 
-   } 
-}
-} 
-}
-
-.text-error{
-    display: flex;
-    flex-direction: column;
-    @include padding(71px,71px,71px,71px);
-    h2{
-        font-size:24px;
+    .text-error {
+      display: flex;
+      flex-direction: column;
+      @include padding(71px, 71px, 71px, 71px);
+      h2 {
+        font-size: 24px;
         font-weight: 900;
-        @include padding(null,null,28px,null);
-  
-    }
-    p{
+        @include padding(null, null, 28px, null);
+      }
+      p {
         font-size: 16px;
         line-height: 24px;
-        @include padding(null,null,20px,null);
+        @include padding(null, null, 20px, null);
 
-        &:nth-child(4){
-            color: $base-green;
-            @include padding(6px,null,67px,null);
+        &:nth-child(4) {
+          color: $base-green;
+          @include padding(6px, null, 67px, null);
         }
-    }
-    .search{
-        position:relative;
-    
-    input{
-        
-        border: 2px solid $m_grey;
-background-color: white;
-width: 100%;
-border-radius: 20px;
-@include padding(10px,10px,10px,10px);
+      }
+      .search {
+        position: relative;
 
+        input {
+          border: 2px solid $m_grey;
+          background-color: white;
+          width: 100%;
+          border-radius: 20px;
+          @include padding(10px, 10px, 10px, 10px);
+        }
+        i {
+          position: absolute;
+          top: 12px;
+          right: 28px;
+        }
+      }
     }
-    i{
-        position: absolute;
-        top:12px;
-        right:28px;
-    }
-}
-}
-}
+  }
 }

@@ -1,16 +1,18 @@
 .banner2 {
     position:relative;
     background-color: $base-darkblue;
+    width: 100%;
 
     img{
         width:100%;
         height:auto;
+        display: block;
     }
     .overlay2-text
     {
         position: absolute;
-        top:0;
-        left:0;
+        top: 0;
+        left: 0;
         right: 0;
         bottom: 0;
         height:100%;
@@ -28,7 +30,7 @@
             @include margin(null,null,41px,null);
 
             @include screen("breakpoint-small") {
-                font-size: 38px;
+                font-size: 20px;
             }
         }
         h3{
@@ -38,6 +40,10 @@
             font-weight:400;
             font-size: 14px;
             text-align: center;
+            @include screen("breakpoint-small") {
+                width:280px;
+               
+            }
         }
     }
 }

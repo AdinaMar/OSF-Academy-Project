@@ -845,9 +845,9 @@ nav input {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
   justify-items: center;
-  /* @include padding(0px, 59px, 59px, 59px);*/
+  /* @include padding(0px, 59px, 59px, 0px);*/
   width: 100%;
-  /*@include margin(null,null, null, null);*/
+  /* @include margin(null,null, null, null);*/
 }
 @media only screen and (min-width:768px) and (max-width:1279px) {
   .products .containerProducts {
@@ -866,6 +866,7 @@ nav input {
     padding-bottom: 59px;
     padding-left: 80px;
     margin-left: -20px;
+    align-self: center;
     /*@include padding(0px,auto,59px,auto);*/
   }
 }
@@ -1107,6 +1108,9 @@ nav input {
 
 .mySwiper {
   width: 100%;
+  /*.swiper-slide-active{
+     width: 271px;
+   }*/
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
   .mySwiper {
@@ -1155,6 +1159,8 @@ footer {
   justify-content: space-around;
   width: 100%;
   margin-top: 70px;
+  padding-top: 40px;
+  background-color: white;
 }
 @media print {
   footer {
@@ -1354,6 +1360,10 @@ footer input {
   .carusel-container {
     align-items: center;
     justify-content: center;
+    margin-top: 17px;
+    margin-right: 12px;
+    margin-bottom: 17px;
+    margin-left: 12px;
     /* @include margin(17px,null,17px,null);*/
   }
 }
@@ -1496,17 +1506,28 @@ footer input {
   padding-bottom: 0px;
   padding-left: 0px;
   position: relative;
+  width: 870px;
+  height: 505px;
 }
 .carusel-container .carousel .swiper-pagination-bullets {
+  display: block;
   position: absolute;
-  bottom: 40px;
+  bottom: 70px;
 }
 .carusel-container .carousel .swiper-pagination-bullets span {
   background-color: #fff;
 }
+@media only screen and (min-width:768px) and (max-width:1279px) {
+  .carusel-container .carousel {
+    width: 420px;
+    height: 390px;
+  }
+}
 @media only screen and (min-width:320px) and (max-width:767px) {
   .carusel-container .carousel {
     justify-self: center;
+    width: 290px;
+    height: 472px;
   }
 }
 .carusel-container .carousel .carousel-overlay {
@@ -1691,10 +1712,12 @@ footer input {
 .banner2 {
   position: relative;
   background-color: #262a32;
+  width: 100%;
 }
 .banner2 img {
   width: 100%;
   height: auto;
+  display: block;
 }
 .banner2 .overlay2-text {
   position: absolute;
@@ -1717,7 +1740,7 @@ footer input {
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
   .banner2 .overlay2-text h1 {
-    font-size: 38px;
+    font-size: 20px;
   }
 }
 .banner2 .overlay2-text h3 {
@@ -1727,6 +1750,11 @@ footer input {
   font-weight: 400;
   font-size: 14px;
   text-align: center;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .banner2 .overlay2-text h3 {
+    width: 280px;
+  }
 }
 
 .featured {
@@ -2617,6 +2645,11 @@ footer input {
   margin-left: 16px;
   align-self: flex-start;
 }
+.pdp .whole-container .prod-container .big-section .picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 @media only screen and (min-width:768px) and (max-width:1279px) {
   .pdp .whole-container .prod-container .big-section .picture {
     align-self: center;
@@ -3013,9 +3046,9 @@ footer input {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
   justify-items: center;
-  /* @include padding(0px, 59px, 59px, 59px);*/
+  /* @include padding(0px, 59px, 59px, 0px);*/
   width: 100%;
-  /*@include margin(null,null, null, null);*/
+  /* @include margin(null,null, null, null);*/
 }
 @media only screen and (min-width:768px) and (max-width:1279px) {
   .products-popular .containerProducts-popular {
@@ -3034,6 +3067,7 @@ footer input {
     padding-bottom: 59px;
     padding-left: 80px;
     margin-left: -20px;
+    align-self: center;
     /*@include padding(0px,auto,59px,auto);*/
   }
 }
@@ -3308,7 +3342,7 @@ footer input {
   padding-right: 3px;
   padding-bottom: 10px;
   padding-left: 3px;
-  margin-right: 150px;
+  margin-right: 120px;
   margin-left: 300px;
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
@@ -3421,6 +3455,141 @@ footer input {
   font-weight: 700;
   margin-top: 20px;
   margin-right: 100px;
+}
+
+.container-countdown {
+  background: #f1edea;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-countdown .contain-countdown {
+  background-color: white;
+  width: 90%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #45413e;
+}
+.container-countdown .contain-countdown h1 {
+  line-height: 30px;
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+.container-countdown .contain-countdown p {
+  font-size: 14px;
+  line-height: 20px;
+}
+.container-countdown .contain-countdown .countdown {
+  display: flex;
+  flex-direction: row;
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .container-countdown .contain-countdown .countdown {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.container-countdown .contain-countdown .countdown .timer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  text-align: center;
+  /*&:nth-child(5) {
+      @include screen("breakpoint-small") {
+          justify-self: center;
+          align-self: center;
+          align-content: center;
+          width:100%;
+          @include margin(null,auto,null,auto);
+      }
+  }*/
+}
+.container-countdown .contain-countdown .countdown .timer h2 {
+  font-size: 48px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  border-radius: 50%;
+  border: 1px solid #84bc22;
+  width: 108px;
+  height: 108px;
+  padding-top: 35px;
+  padding-right: 35px;
+  padding-bottom: 35px;
+  padding-left: 35px;
+}
+@media only screen and (min-width:768px) and (max-width:1279px) {
+  .container-countdown .contain-countdown .countdown .timer h2 {
+    width: 50px;
+    height: 50px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    font-size: 18px;
+  }
+}
+.container-countdown .contain-countdown .countdown .timer small {
+  font-size: 18px;
+  line-height: 30px;
+}
+@media only screen and (min-width:768px) and (max-width:1279px) {
+  .container-countdown .contain-countdown .countdown .timer small {
+    font-size: 14px;
+  }
+}
+.container-countdown .contain-countdown form {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+.container-countdown .contain-countdown form input {
+  border-radius: 30px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  width: 400px;
+  border: 2px solid #45413e;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .container-countdown .contain-countdown form input {
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    width: 200px;
+  }
+}
+.container-countdown .contain-countdown form button {
+  cursor: pointer;
+  background-color: white;
+  font-size: 20px;
+  border: none;
+  position: absolute;
+  right: 10px;
+  color: #84bc22;
+  top: 20px;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .container-countdown .contain-countdown form button {
+    position: static;
+  }
 }
 
 * {

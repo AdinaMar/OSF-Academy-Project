@@ -219,13 +219,19 @@
 }
 
 .mySwiper {
+
   margin-left: null;
   margin-right: null;
-  width: 100%;
+  width: 100%; 
+ /*.swiper-slide-active{
+    width: 271px;
+  }*/
   @include screen("breakpoint-small") {
     /* width: 100%;*/
-    height: 100%;
+     height: 100%; 
   }
+
+    
 
   .swiper-slide {
     @include screen("breakpoint-small") {
@@ -250,17 +256,22 @@
     }
   }
 
-.swiper-slide img {
-  @include screen("breakpoint-small") {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .swiper-slide img {
+    @include screen("breakpoint-small") {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
-}
-
-.swiper-pagination-bullet {
-  background: var(--swiper-pagination-bullet-inactive-color, 	#C8C8C8);
   
-}
-}
+  .swiper-pagination-bullet {
+    background: var(--swiper-pagination-bullet-inactive-color, 	#C8C8C8);
+    
+  }
+  }
+
+
+
+
+

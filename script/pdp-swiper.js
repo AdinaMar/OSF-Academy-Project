@@ -25,7 +25,7 @@ const enableSwiperPdp = function() {
         
        loop: true,
        slidesPerView:3,
-       /*centeredSlides: true,*/
+      /* centeredSlides: true,*/
        spaceBetween: 20,
    
        grabCursor: true,

@@ -115,21 +115,25 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
   justify-items: center;
-  /* @include padding(0px, 59px, 59px, 59px);*/
+  
+  /* @include padding(0px, 59px, 59px, 0px);*/
   width: 100%;
-  /*@include margin(null,null, null, null);*/
+ /* @include margin(null,null, null, null);*/
   @include screen("breakpoint-med-small") {
     grid-template-columns: 1fr 1fr;
   }
 
   @include screen("breakpoint-small") {
     display: flex;
+    
+   
     /*flex-direction: row;*/
     text-align: center;
     /* height:100%;*/
     grid-gap: 15px;
     @include padding(0px, 80px, 59px, 80px);
-    @include margin(null, null, null, -20px);
+   @include margin(null,null, null, -20px);
+   align-self: center;
     /*@include padding(0px,auto,59px,auto);*/
   }
 }

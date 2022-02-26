@@ -50,7 +50,7 @@ h1{
             }
             .numbers {
                 @include select-numbers;
-               @include margin(null,150px,null,300px);
+               @include margin(null,120px,null,300px);
             }
        
        strong {

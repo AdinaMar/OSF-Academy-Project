@@ -6,6 +6,7 @@
   @include screen("breakpoint-small") {
     align-items: center;
     justify-content: center;
+    @include margin(17px,12px,17px,12px);
    /* @include margin(17px,null,17px,null);*/
 }
  
@@ -131,9 +132,9 @@
 
 .carousel { 
     .swiper-pagination-bullets {
-  
+        display: block;
         position: absolute;
-        bottom:40px;
+        bottom:70px;
         span{
             background-color: #fff;
         }
@@ -141,8 +142,17 @@
     }
     @include padding(0px,30px,0px,0px);
     position: relative;
+    width:870px;
+    height:505px;
+
+    @include screen("breakpoint-med-small") {
+        width:420px;
+        height:390px;
+    }
     @include screen("breakpoint-small") {
        justify-self: center;
+       width:290px;
+       height:472px;
     }
 
 .carousel-overlay{

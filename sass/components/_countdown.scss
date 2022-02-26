@@ -1,0 +1,124 @@
+.container-countdown{
+    @include products(#f1edea);
+
+
+
+    .contain-countdown{
+        background-color: white;
+        width:90%;
+        @include margin(30px,null,30px,null);
+        @include padding(20px,30px,30px,30px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $m-grey;
+        
+
+        h1{
+            line-height: 30px;
+            font-size: 30px;
+            font-weight:900;
+            @include margin(null,null,30px,null);
+        }
+
+        p{
+            font-size:14px;
+            line-height: 20px;
+
+        
+            
+        }
+
+        .countdown{
+            display: flex;
+            flex-direction: row;
+
+            @include margin(90px,null,90px,null);
+            @include screen("breakpoint-small") {
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .timer{
+
+                display: flex;
+                flex-direction: column;
+                @include padding(30px,30px,30px,30px);
+                text-align: center;
+
+        /*&:nth-child(5) {
+            @include screen("breakpoint-small") {
+                justify-self: center;
+                align-self: center;
+                align-content: center;
+                width:100%;
+                @include margin(null,auto,null,auto);
+            }
+        }*/
+
+                h2 {
+                    font-size: 48px;
+                    line-height: 30px;
+                    font-weight: 700;
+                    @include margin(null,null,50px,null);
+                    border-radius:50%;
+                    border: 1px solid $base-green;
+                    width:108px;
+                    height:108px;
+                    @include padding(35px,35px,35px,35px);
+
+                    @include screen("breakpoint-med-small") {
+                    width:50px;
+                    height:50px;
+                    @include padding(15px,15px,15px,15px);
+                    font-size: 18px;
+                }
+
+            }
+                small {
+                    font-size: 18px;
+                    line-height: 30px;
+
+                    @include screen("breakpoint-med-small") {
+                        font-size:14px;
+                    }
+                }
+            }
+        }
+    
+    form {
+        position: relative;
+        display: flex;
+        width: 100%;
+
+
+
+        input {
+            border-radius: 30px;
+            @include padding(20px,20px,20px,20px);
+           width: 400px;
+           border: 2px solid $m-grey;
+
+           @include screen("breakpoint-small") {
+            @include padding(10px,15px,10px,15px);
+            width: 200px;
+           }
+        }
+        button {
+            cursor: pointer;
+            background-color: white;
+            font-size: 20px;
+            border: none;
+            position: absolute;
+            right:10px;
+            color: $base-green;
+            top: 20px;
+
+            @include screen("breakpoint-small") {
+                position: static; }
+        }
+    }
+    
+    }
+}

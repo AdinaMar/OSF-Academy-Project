@@ -1,4 +1,6 @@
 .wrapper-cookies {
+
+    
     position: fixed;
     z-index: 99;
    left: 50%;
@@ -11,6 +13,9 @@
     display: flex;
    
     visibility: hidden;
+    @include screen("breakpoint-small") {
+        flex-direction: column;
+    }
    
   &.hide {
       opacity:0;
@@ -29,6 +34,10 @@
         font-size:14px;
         line-height: 24px;
         @include margin(null,144px,null,null);
+
+        @include screen("breakpoint-small") {
+            @include margin(null,0px,null,null);
+        }
         span {
             color: $base_green;
         }
@@ -42,8 +51,11 @@
         border: 2px solid $grey;
         cursor: pointer;
         font-size: 14px;
-    }
 
+        @include screen("breakpoint-small") {
+            @include margin(27px,null,27px,null);
+    }
+    }
 
     i{
         position: absolute;

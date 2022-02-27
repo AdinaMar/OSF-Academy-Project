@@ -12,7 +12,9 @@ nav{
          justify-content: center;
          color: $grey;
          display: flex;
-
+         a{
+            color: $grey;   
+}
         
 
          cursor: pointer;
@@ -593,7 +595,9 @@ li {
          bottom:0;
          right:0;
          left:0;
-
+a{
+    color: $grey;
+}
        
 i{
     &:hover {

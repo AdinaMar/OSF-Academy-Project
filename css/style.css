@@ -31,6 +31,9 @@ nav .icons {
   display: flex;
   cursor: pointer;
 }
+nav .icons a {
+  color: #999999;
+}
 nav .icons .circle {
   position: relative;
 }
@@ -549,6 +552,9 @@ nav input {
     bottom: 0;
     right: 0;
     left: 0;
+  }
+  .icons a {
+    color: #999999;
   }
   .icons i:hover {
     color: #84bc22;
@@ -1885,6 +1891,7 @@ footer input {
 .featured .swiper {
   width: 100%;
   height: 100%;
+  color: #fff;
 }
 .featured .swiper .swiper-slide img {
   display: block;
@@ -1895,16 +1902,16 @@ footer input {
 .featured .swiper .swiper-button-next {
   margin-top: calc(338px - var(--swiper-navigation-size) / 2);
   align-items: center;
-  color: white;
   --swiper-navigation-size: 20px;
   left: 908px;
+  color: var(--swiper-navigation-color, white);
 }
 .featured .swiper .swiper-button-prev {
   margin-top: calc(388px - var(--swiper-navigation-size) / 2);
   align-items: center;
-  color: white;
   --swiper-navigation-size: 20px;
   left: 360px;
+  color: var(--swiper-navigation-color, white);
 }
 
 .small-section {
@@ -3177,6 +3184,11 @@ footer input {
   display: flex;
   visibility: hidden;
 }
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .wrapper-cookies {
+    flex-direction: column;
+  }
+}
 .wrapper-cookies.hide {
   opacity: 0;
   visibility: hidden;
@@ -3194,6 +3206,11 @@ footer input {
   line-height: 24px;
   margin-right: 144px;
 }
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .wrapper-cookies p {
+    margin-right: 0px;
+  }
+}
 .wrapper-cookies p span {
   color: #84bc22;
 }
@@ -3210,6 +3227,12 @@ footer input {
   border: 2px solid #999999;
   cursor: pointer;
   font-size: 14px;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .wrapper-cookies button {
+    margin-top: 27px;
+    margin-bottom: 27px;
+  }
 }
 .wrapper-cookies i {
   position: absolute;
@@ -3316,6 +3339,26 @@ footer input {
   padding-left: 50px;
   align-items: center;
 }
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .whole-section .first-part .first .fa-times {
+    display: block;
+    position: static;
+  }
+}
+@media only screen and (min-width:768px) and (max-width:1279px) {
+  .whole-section .first-part .first {
+    margin-bottom: 25px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .whole-section .first-part .first {
+    flex-direction: column;
+  }
+}
 .whole-section .first-part .first img {
   width: 100px;
   height: 100px;
@@ -3361,6 +3404,18 @@ footer input {
 .whole-section .first-part .first .numbers input {
   width: 50%;
 }
+@media only screen and (min-width:768px) and (max-width:1279px) {
+  .whole-section .first-part .first .numbers {
+    margin-right: 70px;
+    margin-left: 100px;
+  }
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .whole-section .first-part .first .numbers {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 .whole-section .first-part .first strong {
   color: #45413e;
   font-weight: 700;
@@ -3376,11 +3431,25 @@ footer input {
   display: flex;
   flex-direction: column;
 }
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .whole-section .second-part {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+}
 .whole-section .second-part .inputs {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-right: 80px;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .whole-section .second-part .inputs {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .whole-section .second-part .inputs .first-inputs input {
   border-radius: 20px;
@@ -3403,6 +3472,18 @@ footer input {
   padding-left: 30px;
   margin-left: 30px;
 }
+@media only screen and (min-width:768px) and (max-width:1279px) {
+  .whole-section .second-part .inputs .first-inputs button {
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .whole-section .second-part .inputs .first-inputs button {
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+}
 .whole-section .second-part .inputs .second-inputs button {
   background: white;
   color: #84bc22;
@@ -3414,6 +3495,12 @@ footer input {
   padding-bottom: 10px;
   padding-left: 30px;
   margin-left: 30px;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .whole-section .second-part .inputs .second-inputs button {
+    margin-top: 20px;
+    margin-left: 30px;
+  }
 }
 .whole-section .second-part .inputs .second-inputs button:nth-child(2) {
   background: #84bc22;
@@ -3427,15 +3514,37 @@ footer input {
   padding-left: 30px;
   margin-left: 20px;
 }
+@media only screen and (min-width:768px) and (max-width:1279px) {
+  .whole-section .second-part .inputs .second-inputs button:nth-child(2) {
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .whole-section .second-part .inputs .second-inputs button:nth-child(2) {
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+}
 .whole-section .second-part .radios {
   display: flex;
   align-self: flex-end;
   flex-direction: column;
 }
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .whole-section .second-part .radios {
+    align-self: flex-start;
+  }
+}
 .whole-section .second-part .radios .radios-into {
   display: flex;
   flex-direction: row;
   margin-right: 80px;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .whole-section .second-part .radios .radios-into {
+    flex-direction: column;
+  }
 }
 .whole-section .second-part .radios .radios-into .radios-buttons {
   margin-top: 10px;
@@ -3456,7 +3565,6 @@ footer input {
   margin-top: 20px;
   margin-right: 100px;
 }
-
 .container-countdown {
   background: #f1edea;
   display: flex;

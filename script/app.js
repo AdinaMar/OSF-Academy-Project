@@ -94,19 +94,7 @@ for(let i=0; i<bags.length;i++){
 
 
 
-/////////////////////////////////////LOAD MORE
 
-
-const loadMore = document.querySelector(".load");
-
-const products = document.querySelector(".prodotto");
-
-const loading = () => {
-products.classList.add("active");
-loadMore.style.display="none";
-}
-
-loadMore.addEventListener("click", loading);
 
 
 /////////////////////////////////////

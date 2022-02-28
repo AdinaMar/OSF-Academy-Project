@@ -130,9 +130,10 @@
     /*flex-direction: row;*/
     text-align: center;
     /* height:100%;*/
-    grid-gap: 15px;
-    @include padding(0px, 80px, 59px, 80px);
-   @include margin(null,null, null, -20px);
+    grid-gap: 15px;    
+    @include padding(0px, 80px, 59px, 80px);  
+   @include margin(null,null, null, -20px); 
+  
    align-self: center;
     /*@include padding(0px,auto,59px,auto);*/
   }
@@ -147,7 +148,7 @@
   display: flex;
   flex-direction: column;
   @include screen("breakpoint-small") {
-    @include margin(null, -12px, null, -12px);
+    @include margin(null, -12px, null, -12px);     
   }
   img {
     object-fit: cover;

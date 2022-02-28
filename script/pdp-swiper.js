@@ -5,15 +5,15 @@ let mySwiperPdp;
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
 const breakpointCheckerPdp = function() {
-   // if larger viewport and multi-row layout needed
+   
    if ( breakpointPdp.matches === true ) {
-      // clean up old instances and inline styles when available
+   
       if ( mySwiperPdp !== undefined ) mySwiperPdp.destroy( true, true );
-      // or/and do nothing
+     
       return;
-   // else if a small viewport and single column layout needed
+  
    } else if ( breakpointPdp.matches === false ) {
-      // fire small viewport version of swiper
+    
       return enableSwiperPdp();
    }
 };
@@ -39,7 +39,6 @@ const enableSwiperPdp = function() {
        },
      });
    }
-//////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
 // keep an eye on viewport size changes

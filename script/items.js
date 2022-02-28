@@ -19,7 +19,7 @@ xhttp.onload = function() {
 xhttp.open("GET", "items.json");
 xhttp.send();*/
 
-fetch("../items.json")
+fetch("items.json")
 .then(response => response.json())
 .then(products => populateSection(products));
 
@@ -49,3 +49,17 @@ function populateSection(items) {
     }
 
 }
+
+/////////////////////////////////////LOAD MORE
+
+
+const loadMore = document.querySelector(".load");
+
+const products = document.querySelector(".prodotto");
+
+const loading = () => {
+products.classList.add("active");
+loadMore.style.display="none";
+}
+
+loadMore.addEventListener("click", loading);

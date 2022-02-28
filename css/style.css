@@ -681,14 +681,14 @@ nav input {
   margin-left: 32px;
 }
 .login-form form h2 {
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
   color: #45413e;
   font-weight: 900;
 }
 .login-form form span {
   display: block;
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 26px;
   padding-top: 16px;
@@ -698,20 +698,27 @@ nav input {
 .login-form form input {
   width: 90%;
   /*margin: 0.7rem 0;*/
-  margin-top: 11px;
+  margin-top: 16px;
   margin-right: 0;
-  margin-bottom: 11px;
+  margin-bottom: 16px;
   margin-left: 0;
   font-size: 25px;
   border: 2px solid #999999;
   border-radius: 20px;
   color: black;
   padding: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
 }
 .login-form form .submit-btn {
   margin-top: 16px;
   display: inline-block;
-  padding: 0.9rem 3rem;
+  padding-top: 11px;
+  padding-right: 36px;
+  padding-bottom: 11px;
+  padding-left: 36px;
   border-radius: 20px;
   color: aliceblue;
   background: #84bc22;
@@ -721,9 +728,9 @@ nav input {
   text-align: center;
   width: 50%;
   margin: 1.5rem 0;
-  margin-top: 24px;
+  margin-top: 20px;
   margin-right: 0;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   margin-left: 0;
   border: none;
   align-content: center;
@@ -735,8 +742,8 @@ nav input {
 }
 .login-form form p {
   color: #84bc22;
-  line-height: 47px;
-  font-size: 16px;
+  line-height: 35px;
+  font-size: 12px;
   cursor: pointer;
   margin-bottom: -35px;
 }
@@ -764,8 +771,8 @@ nav input {
 }
 .login-form form .pass {
   color: #84bc22;
-  line-height: 57px;
-  font-size: 16px;
+  line-height: 43px;
+  font-size: 12px;
 }
 
 .products {
@@ -1354,7 +1361,7 @@ footer input {
     padding-bottom: 20px;
   }
 }
-.carusel-container {
+.carousel-container {
   display: flex;
   flex-direction: row;
   margin-top: 17px;
@@ -1363,7 +1370,7 @@ footer input {
   margin-left: 52px;
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
-  .carusel-container {
+  .carousel-container {
     align-items: center;
     justify-content: center;
     margin-top: 17px;
@@ -1373,25 +1380,25 @@ footer input {
     /* @include margin(17px,null,17px,null);*/
   }
 }
-.carusel-container .palmier {
+.carousel-container .palmier {
   display: flex;
   flex-direction: column;
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
-  .carusel-container .palmier {
+  .carousel-container .palmier {
     display: none;
   }
 }
 @media only screen and (min-width:768px) and (max-width:1279px) {
-  .carusel-container .palmier img {
+  .carousel-container .palmier img {
     height: 280px;
     width: 230px;
   }
 }
-.carusel-container .palmier .overlay {
+.carousel-container .palmier .overlay {
   position: relative;
 }
-.carusel-container .palmier .overlay .text-overlay {
+.carousel-container .palmier .overlay .text-overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1404,7 +1411,7 @@ footer input {
   align-items: center;
   /*justify-content: center;*/
 }
-.carusel-container .palmier .overlay .text-overlay h2 {
+.carousel-container .palmier .overlay .text-overlay h2 {
   font-weight: 700;
   font-size: 100px;
   color: #fff;
@@ -1414,7 +1421,7 @@ footer input {
   padding-left: 0px;
 }
 @media only screen and (min-width:768px) and (max-width:1279px) {
-  .carusel-container .palmier .overlay .text-overlay h2 {
+  .carousel-container .palmier .overlay .text-overlay h2 {
     padding-top: 30px;
     padding-right: 0px;
     padding-bottom: 30px;
@@ -1422,7 +1429,7 @@ footer input {
     font-size: 55px;
   }
 }
-.carusel-container .palmier .overlay .text-overlay h3 {
+.carousel-container .palmier .overlay .text-overlay h3 {
   color: #fff;
   font-size: 24px;
   line-height: 30px;
@@ -1430,13 +1437,13 @@ footer input {
   width: 120px;
   text-align: center;
 }
-.carusel-container .palmier .additional {
+.carousel-container .palmier .additional-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.carusel-container .palmier .additional h4 {
+.carousel-container .palmier .additional-text h4 {
   font-size: 18px;
   color: #45413e;
   font-weight: 400;
@@ -1448,14 +1455,14 @@ footer input {
   margin-left: auto;
 }
 @media only screen and (min-width:768px) and (max-width:1279px) {
-  .carusel-container .palmier .additional h4 {
+  .carousel-container .palmier .additional-text h4 {
     margin-top: 8px;
     margin-right: auto;
     margin-bottom: auto;
     margin-left: auto;
   }
 }
-.carusel-container .palmier .additional p {
+.carousel-container .palmier .additional-text p {
   color: #45413e;
   font-size: 13px;
   width: 195px;
@@ -1467,14 +1474,14 @@ footer input {
   margin-left: auto;
 }
 @media only screen and (min-width:768px) and (max-width:1279px) {
-  .carusel-container .palmier .additional p {
+  .carousel-container .palmier .additional-text p {
     margin-top: 10px;
     margin-right: auto;
     margin-bottom: 8px;
     margin-left: auto;
   }
 }
-.carusel-container .palmier .additional a button {
+.carousel-container .palmier .additional-text a button {
   width: 147px;
   height: 36px;
   border-radius: 19px;
@@ -1483,7 +1490,7 @@ footer input {
   display: flex;
   align-items: center;
 }
-.carusel-container .palmier .additional a button span {
+.carousel-container .palmier .additional-text a button span {
   color: #3a5b96;
   font-size: 14px;
   font-weight: 400;
@@ -1492,7 +1499,7 @@ footer input {
   margin-bottom: 13px;
   margin-left: 28px;
 }
-.carusel-container .palmier .additional a button i {
+.carousel-container .palmier .additional-text a button i {
   color: #3a5b96;
   font-size: 17px;
   margin-top: 11px;
@@ -1500,13 +1507,13 @@ footer input {
   margin-left: 23px;
 }
 @media only screen and (min-width:768px) and (max-width:1279px) {
-  .carusel-container .palmier .additional a button i {
+  .carousel-container .palmier .additional-text a button i {
     margin-top: 8px;
     margin-bottom: 4px;
     margin-left: 20px;
   }
 }
-.carusel-container .carousel {
+.carousel-container .carousel {
   padding-top: 0px;
   padding-right: 30px;
   padding-bottom: 0px;
@@ -1515,28 +1522,28 @@ footer input {
   width: 870px;
   height: 505px;
 }
-.carusel-container .carousel .swiper-pagination-bullets {
+.carousel-container .carousel .swiper-pagination-bullets {
   display: block;
   position: absolute;
   bottom: 70px;
 }
-.carusel-container .carousel .swiper-pagination-bullets span {
+.carousel-container .carousel .swiper-pagination-bullets span {
   background-color: #fff;
 }
 @media only screen and (min-width:768px) and (max-width:1279px) {
-  .carusel-container .carousel {
+  .carousel-container .carousel {
     width: 420px;
     height: 390px;
   }
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
-  .carusel-container .carousel {
+  .carousel-container .carousel {
     justify-self: center;
     width: 290px;
     height: 472px;
   }
 }
-.carusel-container .carousel .carousel-overlay {
+.carousel-container .carousel .carousel-overlay {
   position: relative;
   /*.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
      /* position: absolute;*/
@@ -1546,25 +1553,25 @@ footer input {
       bottom:70px;
   } */
 }
-.carusel-container .carousel .carousel-overlay img {
+.carousel-container .carousel .carousel-overlay img {
   width: 870px;
   height: 505px;
   object-fit: cover;
   border-radius: 5px;
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
-  .carusel-container .carousel .carousel-overlay img {
+  .carousel-container .carousel .carousel-overlay img {
     width: 290px;
     height: 472px;
   }
 }
 @media only screen and (min-width:768px) and (max-width:1279px) {
-  .carusel-container .carousel .carousel-overlay img {
+  .carousel-container .carousel .carousel-overlay img {
     width: 420px;
     height: 390px;
   }
 }
-.carusel-container .carousel .carousel-overlay .text-carousel-overlay1 {
+.carousel-container .carousel .carousel-overlay .text-carousel-overlay1 {
   position: absolute;
   top: 79px;
   right: 0;
@@ -1576,7 +1583,7 @@ footer input {
   flex-direction: column;
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
-  .carusel-container .carousel .carousel-overlay .text-carousel-overlay1 {
+  .carousel-container .carousel .carousel-overlay .text-carousel-overlay1 {
     width: 100%;
     height: 100%;
     top: 0;
@@ -1586,14 +1593,14 @@ footer input {
   }
 }
 @media only screen and (min-width:768px) and (max-width:1279px) {
-  .carusel-container .carousel .carousel-overlay .text-carousel-overlay1 {
+  .carousel-container .carousel .carousel-overlay .text-carousel-overlay1 {
     width: 100%;
     height: 100%;
     top: 39px;
     left: 30px;
   }
 }
-.carusel-container .carousel .carousel-overlay .text-carousel-overlay2 {
+.carousel-container .carousel .carousel-overlay .text-carousel-overlay2 {
   position: absolute;
   top: 79px;
   right: 0;
@@ -1605,7 +1612,7 @@ footer input {
   flex-direction: column;
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
-  .carusel-container .carousel .carousel-overlay .text-carousel-overlay2 {
+  .carousel-container .carousel .carousel-overlay .text-carousel-overlay2 {
     width: 100%;
     height: 100%;
     top: 0;
@@ -1615,14 +1622,14 @@ footer input {
   }
 }
 @media only screen and (min-width:768px) and (max-width:1279px) {
-  .carusel-container .carousel .carousel-overlay .text-carousel-overlay2 {
+  .carousel-container .carousel .carousel-overlay .text-carousel-overlay2 {
     width: 100%;
     height: 100%;
     top: 39px;
     left: 30px;
   }
 }
-.carusel-container .carousel .carousel-overlay .text-carousel-overlay3 {
+.carousel-container .carousel .carousel-overlay .text-carousel-overlay3 {
   position: absolute;
   top: 79px;
   right: 0;
@@ -1634,7 +1641,7 @@ footer input {
   flex-direction: column;
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
-  .carusel-container .carousel .carousel-overlay .text-carousel-overlay3 {
+  .carousel-container .carousel .carousel-overlay .text-carousel-overlay3 {
     width: 100%;
     height: 100%;
     top: 0;
@@ -1644,14 +1651,14 @@ footer input {
   }
 }
 @media only screen and (min-width:768px) and (max-width:1279px) {
-  .carusel-container .carousel .carousel-overlay .text-carousel-overlay3 {
+  .carousel-container .carousel .carousel-overlay .text-carousel-overlay3 {
     width: 100%;
     height: 100%;
     top: 39px;
     left: 30px;
   }
 }
-.carusel-container .carousel .carousel-overlay h1 {
+.carousel-container .carousel .carousel-overlay h1 {
   color: #fff;
   font-size: 48px;
   font-weight: 700;
@@ -1661,7 +1668,7 @@ footer input {
   margin-bottom: 114px;
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
-  .carusel-container .carousel .carousel-overlay h1 {
+  .carousel-container .carousel .carousel-overlay h1 {
     width: 260px;
     height: 88px;
     font-size: 28px;
@@ -1672,13 +1679,13 @@ footer input {
   }
 }
 @media only screen and (min-width:768px) and (max-width:1279px) {
-  .carusel-container .carousel .carousel-overlay h1 {
+  .carousel-container .carousel .carousel-overlay h1 {
     font-size: 28px;
     width: 339px;
     height: 53px;
   }
 }
-.carusel-container .carousel .carousel-overlay p {
+.carousel-container .carousel .carousel-overlay p {
   font-size: 14px;
   color: #fff;
   font-weight: 400;
@@ -1688,14 +1695,14 @@ footer input {
   margin-bottom: 48px;
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
-  .carusel-container .carousel .carousel-overlay p {
+  .carousel-container .carousel .carousel-overlay p {
     width: 258px;
     height: 132px;
     text-align: center;
     margin-bottom: 10px;
   }
 }
-.carusel-container .carousel .carousel-overlay button {
+.carousel-container .carousel .carousel-overlay button {
   border: 2px solid rgba(255, 255, 255, 0.5);
   background-color: transparent;
   border-radius: 20px;
@@ -1708,7 +1715,7 @@ footer input {
   cursor: pointer;
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
-  .carusel-container .carousel .carousel-overlay button {
+  .carousel-container .carousel .carousel-overlay button {
     margin-right: 77px;
     margin-bottom: 70px;
     margin-left: 77px;
@@ -1914,7 +1921,7 @@ footer input {
   color: var(--swiper-navigation-color, white);
 }
 
-.small-section {
+.service-section {
   display: flex;
   flex-direction: row;
   background-color: #45413e;
@@ -1925,37 +1932,37 @@ footer input {
   padding-left: 63px;
 }
 @media print {
-  .small-section {
+  .service-section {
     display: none;
   }
 }
 @media only screen and (min-width:768px) and (max-width:1279px) {
-  .small-section {
+  .service-section {
     grid-gap: 60px;
   }
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
-  .small-section {
+  .service-section {
     flex-direction: column;
   }
 }
-.small-section i {
+.service-section i {
   color: #84bc22;
   font-size: 60px;
   padding-right: 36px;
 }
 @media only screen and (min-width:768px) and (max-width:1279px) {
-  .small-section i {
+  .service-section i {
     font-size: 40px;
   }
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
-  .small-section i {
+  .service-section i {
     padding-right: 36px;
     padding-left: 36px;
   }
 }
-.small-section .package {
+.service-section .package {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1967,18 +1974,18 @@ footer input {
     }*/
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
-  .small-section .package:nth-child(odd) {
+  .service-section .package:nth-child(odd) {
     flex-direction: row-reverse;
   }
 }
-.small-section .package h2 {
+.service-section .package h2 {
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
   color: #ffffff;
   padding-bottom: 22px;
 }
-.small-section .package p {
+.service-section .package p {
   color: #868380;
   font-size: 14px;
   font-weight: 400;
@@ -2575,6 +2582,14 @@ footer input {
   align-items: center;
   width: 100%;
 }
+.pdp .mySwiper5 {
+  overflow: visible;
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .pdp .mySwiper5 {
+    overflow: hidden;
+  }
+}
 .pdp ul.breadcrumb {
   padding-top: 47px;
   padding-right: 16px;
@@ -2599,7 +2614,7 @@ footer input {
   color: #84bc22;
   text-decoration: none;
 }
-.pdp .whole-container {
+.pdp .pdp-container {
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -2611,7 +2626,7 @@ footer input {
   align-items: center;
   justify-content: center;
 }
-.pdp .whole-container .prod-container {
+.pdp .pdp-container .prod-container {
   display: flex;
   flex-direction: row;
   grid-gap: 15px;
@@ -2621,22 +2636,22 @@ footer input {
   @include margin(26px, 55px, 26px, 55px);*/
 }
 @media only screen and (min-width:768px) and (max-width:1279px) {
-  .pdp .whole-container .prod-container {
+  .pdp .pdp-container .prod-container {
     flex-direction: column;
   }
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
-  .pdp .whole-container .prod-container {
+  .pdp .pdp-container .prod-container {
     flex-direction: column;
   }
 }
-.pdp .whole-container .prod-container .big-section {
+.pdp .pdp-container .prod-container .big-section {
   display: flex;
   flex-direction: row;
   align-self: flex-start;
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
-  .pdp .whole-container .prod-container .big-section {
+  .pdp .pdp-container .prod-container .big-section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -2644,7 +2659,7 @@ footer input {
     margin-left: auto;
   }
 }
-.pdp .whole-container .prod-container .big-section .picture {
+.pdp .pdp-container .prod-container .big-section .picture {
   position: relative;
   margin-top: 16px;
   margin-right: 16px;
@@ -2652,28 +2667,28 @@ footer input {
   margin-left: 16px;
   align-self: flex-start;
 }
-.pdp .whole-container .prod-container .big-section .picture img {
+.pdp .pdp-container .prod-container .big-section .picture img {
   width: 100%;
   height: auto;
   display: block;
 }
 @media only screen and (min-width:768px) and (max-width:1279px) {
-  .pdp .whole-container .prod-container .big-section .picture {
+  .pdp .pdp-container .prod-container .big-section .picture {
     align-self: center;
   }
 }
-.pdp .whole-container .prod-container .big-section .picture i {
+.pdp .pdp-container .prod-container .big-section .picture i {
   position: absolute;
   top: 20px;
   left: 20px;
   color: #84bc22;
   cursor: pointer;
 }
-.pdp .whole-container .prod-container .big-section .picture.zoom {
+.pdp .pdp-container .prod-container .big-section .picture.zoom {
   -webkit-transform: scale(1.5);
   transform: scale(1.5);
 }
-.pdp .whole-container .prod-container .big-section .pictures {
+.pdp .pdp-container .prod-container .big-section .pictures {
   display: flex;
   flex-direction: column;
   margin-top: 27px;
@@ -2686,7 +2701,7 @@ footer input {
   cursor: pointer;
 }
 @media only screen and (min-width:768px) and (max-width:1279px) {
-  .pdp .whole-container .prod-container .big-section .pictures {
+  .pdp .pdp-container .prod-container .big-section .pictures {
     flex-direction: column;
     margin-top: 27px;
     margin-right: 33px;
@@ -2695,7 +2710,7 @@ footer input {
   }
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
-  .pdp .whole-container .prod-container .big-section .pictures {
+  .pdp .pdp-container .prod-container .big-section .pictures {
     flex-direction: row;
     grid-gap: 18px;
     margin-top: 27px;
@@ -2704,7 +2719,7 @@ footer input {
     margin-left: 13px;
   }
 }
-.pdp .whole-container .prod-container .infos {
+.pdp .pdp-container .prod-container .infos {
   align-self: flex-start;
   margin-top: 46px;
   margin-right: 54px;
@@ -2712,34 +2727,34 @@ footer input {
   margin-left: 16px;
 }
 @media only screen and (min-width:768px) and (max-width:1279px) {
-  .pdp .whole-container .prod-container .infos {
+  .pdp .pdp-container .prod-container .infos {
     align-self: center;
   }
 }
-.pdp .whole-container .prod-container .infos h2 {
+.pdp .pdp-container .prod-container .infos h2 {
   color: #45413e;
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 42px;
 }
 @media only screen and (min-width:768px) and (max-width:1279px) {
-  .pdp .whole-container .prod-container .infos h2 {
+  .pdp .pdp-container .prod-container .infos h2 {
     align-self: center;
   }
 }
-.pdp .whole-container .prod-container .infos .wrapping {
+.pdp .pdp-container .prod-container .infos .wrapping {
   width: 50%;
   position: relative;
   user-select: none;
 }
-.pdp .whole-container .prod-container .infos .wrapping.active .select {
+.pdp .pdp-container .prod-container .infos .wrapping.active .select {
   display: block;
 }
-.pdp .whole-container .prod-container .infos .wrapping .option {
+.pdp .pdp-container .prod-container .infos .wrapping .option {
   display: flex;
   align-items: center;
 }
-.pdp .whole-container .prod-container .infos .wrapping .option a {
+.pdp .pdp-container .prod-container .infos .wrapping .option a {
   display: block;
   width: 14px;
   height: 14px;
@@ -2748,22 +2763,22 @@ footer input {
   margin-right: 11px;
   margin-left: 11px;
 }
-.pdp .whole-container .prod-container .infos .wrapping .option #white {
+.pdp .pdp-container .prod-container .infos .wrapping .option #white {
   background: #ffffff;
 }
-.pdp .whole-container .prod-container .infos .wrapping .option #green {
+.pdp .pdp-container .prod-container .infos .wrapping .option #green {
   background: #4aaf00;
 }
-.pdp .whole-container .prod-container .infos .wrapping .option #red {
+.pdp .pdp-container .prod-container .infos .wrapping .option #red {
   background: #dc041d;
 }
-.pdp .whole-container .prod-container .infos .wrapping .option #orange {
+.pdp .pdp-container .prod-container .infos .wrapping .option #orange {
   background: #ec6115;
 }
-.pdp .whole-container .prod-container .infos .wrapping .option #brown {
+.pdp .pdp-container .prod-container .infos .wrapping .option #brown {
   background: #3d402f;
 }
-.pdp .whole-container .prod-container .infos .wrapping .default-option {
+.pdp .pdp-container .prod-container .infos .wrapping .default-option {
   border: 2px solid #e8e2d6;
   list-style: none;
   background: #ffffff;
@@ -2772,7 +2787,7 @@ footer input {
   margin-bottom: 24px;
   cursor: pointer;
 }
-.pdp .whole-container .prod-container .infos .wrapping .default-option:before {
+.pdp .pdp-container .prod-container .infos .wrapping .default-option:before {
   content: "";
   position: absolute;
   top: 15px;
@@ -2783,13 +2798,13 @@ footer input {
   border-color: transparent transparent #555555 #555555;
   transform: rotate(-45deg);
 }
-.pdp .whole-container .prod-container .infos .wrapping .default-option li {
+.pdp .pdp-container .prod-container .infos .wrapping .default-option li {
   padding-top: 10px;
   padding-right: 20px;
   padding-bottom: 10px;
   padding-left: 20px;
 }
-.pdp .whole-container .prod-container .infos .wrapping .select {
+.pdp .pdp-container .prod-container .infos .wrapping .select {
   list-style: none;
   position: absolute;
   top: 55px;
@@ -2799,7 +2814,7 @@ footer input {
   border-radius: 20px;
   display: none;
 }
-.pdp .whole-container .prod-container .infos .wrapping .select li {
+.pdp .pdp-container .prod-container .infos .wrapping .select li {
   padding-top: 10px;
   padding-right: 20px;
   padding-bottom: 10px;
@@ -2808,7 +2823,7 @@ footer input {
   border: 2px solid #e8e2d6;
   border-radius: 20px;
 }
-.pdp .whole-container .prod-container .infos .selects {
+.pdp .pdp-container .prod-container .infos .selects {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -2816,12 +2831,12 @@ footer input {
   margin-bottom: 52px;
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
-  .pdp .whole-container .prod-container .infos .selects {
+  .pdp .pdp-container .prod-container .infos .selects {
     flex-direction: column;
     align-items: flex-start;
   }
 }
-.pdp .whole-container .prod-container .infos .selects .numbers {
+.pdp .pdp-container .prod-container .infos .selects .numbers {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2834,22 +2849,22 @@ footer input {
   padding-left: 3px;
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
-  .pdp .whole-container .prod-container .infos .selects .numbers {
+  .pdp .pdp-container .prod-container .infos .selects .numbers {
     margin-bottom: 32px;
   }
 }
-.pdp .whole-container .prod-container .infos .selects .numbers button,
-.pdp .whole-container .prod-container .infos .selects .numbers input {
+.pdp .pdp-container .prod-container .infos .selects .numbers button,
+.pdp .pdp-container .prod-container .infos .selects .numbers input {
   border: none;
   outline: none;
   background: #fff;
   text-align: center;
   font-size: 14px;
 }
-.pdp .whole-container .prod-container .infos .selects .numbers input {
+.pdp .pdp-container .prod-container .infos .selects .numbers input {
   width: 50%;
 }
-.pdp .whole-container .prod-container .infos .selects .cart {
+.pdp .pdp-container .prod-container .infos .selects .cart {
   padding-top: 12px;
   padding-right: 28px;
   padding-bottom: 12px;
@@ -2861,56 +2876,56 @@ footer input {
   border: 2px solid #e8e2d6;
   margin-right: 154px;
 }
-.pdp .whole-container .prod-container .infos .reads {
+.pdp .pdp-container .prod-container .infos .reads {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-bottom: 33px;
 }
-.pdp .whole-container .prod-container .infos .reads p {
+.pdp .pdp-container .prod-container .infos .reads p {
   font-size: 16px;
   line-height: 24px;
   color: #45413e;
   font-weight: 400;
 }
-.pdp .whole-container .prod-container .infos .reads p:nth-child(2) {
+.pdp .pdp-container .prod-container .infos .reads p:nth-child(2) {
   font-size: 14px;
   color: #84bc22;
   padding-top: 17px;
   cursor: pointer;
 }
-.pdp .whole-container .prod-container .infos .social-links {
+.pdp .pdp-container .prod-container .infos .social-links {
   display: flex;
   flex-direction: row;
   opacity: 0.7;
 }
-.pdp .whole-container .prod-container .infos .social-links p {
+.pdp .pdp-container .prod-container .infos .social-links p {
   margin-right: 35px;
   color: #45413e;
   font-size: 14px;
   line-height: 26px;
 }
-.pdp .whole-container .prod-container .infos .social-links i {
+.pdp .pdp-container .prod-container .infos .social-links i {
   color: #45413e;
   opacity: 0.7;
   margin-right: 24px;
 }
 @media print {
-  .pdp .whole-container .tabs {
+  .pdp .pdp-container .tabs {
     display: none;
   }
 }
 @media only screen and (min-width:320px) and (max-width:767px) {
-  .pdp .whole-container .tabs {
+  .pdp .pdp-container .tabs {
     display: none;
   }
 }
-.pdp .whole-container .tabs .single-tabs {
+.pdp .pdp-container .tabs .single-tabs {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.pdp .whole-container .tabs .single-tabs button {
+.pdp .pdp-container .tabs .single-tabs button {
   overflow: hidden;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -2918,17 +2933,18 @@ footer input {
   background: white;
   font-size: 24px;
   font-weight: 700;
+  border: none;
   padding-top: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
   padding-left: 20px;
   cursor: pointer;
 }
-.pdp .whole-container .tabs .single-tabs button.active {
+.pdp .pdp-container .tabs .single-tabs button.active {
   color: white;
   background: #262a32;
 }
-.pdp .whole-container .tabs .tab-content {
+.pdp .pdp-container .tabs .tab-content {
   color: white;
   background: #262a32;
   display: none;
@@ -2940,7 +2956,7 @@ footer input {
   grid-gap: 20px;
   font-size: 16px;
 }
-.pdp .whole-container .tabs .tab-content.active {
+.pdp .pdp-container .tabs .tab-content.active {
   display: grid;
 }
 .pdp h1 {

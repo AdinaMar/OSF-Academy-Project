@@ -26,7 +26,7 @@ closeCookie.addEventListener("click", closingCookie);
 
 function showAfterTen() {
     cookiesWrapper.style.visibility = "visible";
-    body.style.background = "#ccc";
+    
 }
 setTimeout("showAfterTen()", 10000);
 

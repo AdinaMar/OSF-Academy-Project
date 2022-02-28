@@ -42,9 +42,9 @@ plusfirst.addEventListener("click", function() {
     valueCount = numfirst.value;
     valueCount ++;
     numfirst.value = valueCount;
-
+   
     mulCalc2.innerHTML = "$ "  + 2195 * numfirst.value;
-
+    subTotal();
 
 }
 )
@@ -55,7 +55,9 @@ minusfirst.addEventListener("click", function() {
     if(numfirst.value > 0) {
     valueCount --;
     numfirst.value = valueCount;
+   
     mulCalc2.innerHTML = "$ "  + 2195 * numfirst.value;
+    subTotal();
     } else {
         numfirst.value = 0;
     }

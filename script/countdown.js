@@ -8,9 +8,9 @@ const minutes = document.querySelector("#minutes");
 const seconds = document.querySelector("#seconds");
 const months = document.querySelector("#months");
 
-const currentYear = new Date().getFullYear();
+const currentYear1 = new Date().getFullYear();
 
-const meTime = new Date(`February 28 ${currentYear} 19:00:00`);
+const meTime = new Date(`February 28  ${currentYear1} 20:00:00`);
 
 function updateCountDowntime() {
     const currentTime = new Date();
